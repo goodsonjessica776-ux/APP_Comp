@@ -1,7 +1,7 @@
 name: Daily Ad Crawl
 on:
   schedule:
-    - cron: '0 1 * * *' # 每天凌晨1点执行 (UTC)
+    - cron: '0 17 * * *' # 这对应北京时间 1:00 AM
   workflow_dispatch:
 jobs:
   crawl:

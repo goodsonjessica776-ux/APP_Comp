@@ -28,6 +28,12 @@ export default function Home() {
   const [showChart, setShowChart] = useState(false);
   const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
 
+  const clearAllFilters = () => {
+    setSearchTerm('');
+    setSelectedCategory('');
+    setSelectedTags([]);
+  };
+
   // Prevent hydration mismatch by only rendering full interactive UI after mount
   useEffect(() => {
     setHasMounted(true);

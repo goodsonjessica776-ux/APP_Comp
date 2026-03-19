@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import adsData from '@/data/ads.json';
 import AdCard from '@/components/AdCard';
-import { Search, SortDesc, SortAsc, Calendar, Sparkles } from 'lucide-react';
+import { Search, SortDesc, Calendar, Sparkles, Tag, Package, BarChart3, X } from 'lucide-react';
 
 interface AdItem {
   id: string;
@@ -11,27 +11,55 @@ interface AdItem {
   impressions: string | number;
   videoName: string;
   date: string;
+  category?: string;
+  tags?: string[];
 }
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState<'desc' | 'asc' | 'date'>('desc');
   const [selectedAd, setSelectedAd] = useState<AdItem | null>(null);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>('');
+  const [showChart, setShowChart] = useState(false);
+
+  // Extract all unique tags and categories
+  const allTags = useMemo(() => {
+    const tagSet = new Set<string>();
+    (adsData as AdItem[]).forEach(ad => ad.tags?.forEach(t => tagSet.add(t)));
+    return Array.from(tagSet).sort();
+  }, []);
+
+  const allCategories = useMemo(() => {
+    const catSet = new Set<string>();
+    (adsData as AdItem[]).forEach(ad => { if (ad.category) catSet.add(ad.category); });
+    return Array.from(catSet).sort();
+  }, []);
+
+  const parseImpressions = (val: string | number) => {
+    if (typeof val === 'number') return val;
+    const clean = val.toLowerCase().replace(/,/g, '');
+    if (clean.endsWith('m')) return parseFloat(clean) * 1000000;
+    if (clean.endsWith('k')) return parseFloat(clean) * 1000;
+    return parseFloat(clean) || 0;
+  };
 
   const filteredAndSortedAds = useMemo(() => {
-    const parseImpressions = (val: string | number) => {
-      if (typeof val === 'number') return val;
-      const clean = val.toLowerCase().replace(/,/g, '');
-      if (clean.endsWith('m')) return parseFloat(clean) * 1000000;
-      if (clean.endsWith('k')) return parseFloat(clean) * 1000;
-      return parseFloat(clean) || 0;
-    };
-
-    let result = [...adsData];
+    let result = [...(adsData as AdItem[])];
 
     if (searchTerm) {
-      result = result.filter(ad => 
+      result = result.filter(ad =>
         ad.title.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    if (selectedCategory) {
+      result = result.filter(ad => ad.category === selectedCategory);
+    }
+
+    if (selectedTags.length > 0) {
+      result = result.filter(ad =>
+        selectedTags.every(tag => ad.tags?.includes(tag))
       );
     }
 
@@ -43,10 +71,38 @@ export default function Home() {
     });
 
     return result;
-  }, [searchTerm, sortOrder]);
+  }, [searchTerm, sortOrder, selectedTags, selectedCategory]);
+
+  // Tag distribution for the current filtered data
+  const tagDistribution = useMemo(() => {
+    const counts: Record<string, number> = {};
+    filteredAndSortedAds.forEach(ad => {
+      ad.tags?.forEach(tag => {
+        counts[tag] = (counts[tag] || 0) + 1;
+      });
+    });
+    return Object.entries(counts)
+      .sort((a, b) => b[1] - a[1]);
+  }, [filteredAndSortedAds]);
+
+  const maxTagCount = tagDistribution.length > 0 ? tagDistribution[0][1] : 1;
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags(prev =>
+      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+    );
+  };
+
+  const clearAllFilters = () => {
+    setSelectedTags([]);
+    setSelectedCategory('');
+    setSearchTerm('');
+  };
+
+  const hasActiveFilters = selectedTags.length > 0 || selectedCategory !== '' || searchTerm !== '';
 
   return (
-    <main className="min-h-screen p-4 md:p-8 lg:p-12 space-y-12 max-w-[1600px] mx-auto">
+    <main className="min-h-screen p-4 md:p-8 lg:p-12 space-y-8 max-w-[1600px] mx-auto">
       {/* Header Area */}
       <header className="glass p-6 md:p-8 rounded-[32px] sticky top-6 z-50 flex flex-col md:flex-row justify-between items-center gap-6 shadow-2xl">
         <div className="flex items-center gap-3">
@@ -55,7 +111,7 @@ export default function Home() {
           </div>
           <div>
             <h1 className="text-2xl font-bold tracking-tight">AdVision <span className="text-slate-400 font-normal">Dashboard</span></h1>
-            <p className="text-xs text-slate-500 uppercase tracking-widest">Team Internal Access</p>
+            <p className="text-xs text-slate-500 uppercase tracking-widest">Team Internal Access · V2.0</p>
           </div>
         </div>
 
@@ -68,7 +124,7 @@ export default function Home() {
               placeholder="搜索素材标题..." 
               className="bg-black/40 border border-white/10 rounded-2xl py-3 pl-11 pr-4 w-full sm:w-64 outline-none focus:border-indigo-500/50 focus:ring-4 focus:ring-indigo-500/10 transition-all text-sm"
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchTerm(e.target.value)}
             />
           </div>
 
@@ -90,22 +146,131 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Filter Area - Between search and video grid */}
+      <section className="glass rounded-[28px] p-6 space-y-5">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <h3 className="text-sm font-semibold text-slate-300 flex items-center gap-2">
+              <Tag size={14} className="text-indigo-400" /> 筛选面板
+            </h3>
+            <button
+              onClick={() => setShowChart(!showChart)}
+              className={`text-xs px-3 py-1.5 rounded-full border transition-all flex items-center gap-1.5 ${showChart ? 'bg-indigo-600 border-indigo-500 text-white' : 'border-white/10 text-slate-400 hover:text-white hover:border-white/20'}`}
+            >
+              <BarChart3 size={12} /> 数据分布
+            </button>
+          </div>
+          {hasActiveFilters && (
+            <button onClick={clearAllFilters} className="text-xs text-slate-500 hover:text-indigo-400 transition-colors flex items-center gap-1">
+              <X size={12} /> 清空筛选
+            </button>
+          )}
+        </div>
+
+        {/* Category Filter */}
+        <div className="space-y-2">
+          <span className="text-[10px] text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
+            <Package size={11} /> 按产品筛选
+          </span>
+          <div className="flex flex-wrap gap-2">
+            {allCategories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(selectedCategory === cat ? '' : cat)}
+                className={`px-4 py-1.5 rounded-full text-xs font-medium border transition-all ${
+                  selectedCategory === cat 
+                    ? 'bg-emerald-500/20 border-emerald-500/40 text-emerald-300 shadow-[0_0_12px_rgba(16,185,129,0.2)]' 
+                    : 'border-white/8 text-slate-400 hover:text-white hover:border-white/20 bg-white/[0.02]'
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Tag Filter */}
+        <div className="space-y-2">
+          <span className="text-[10px] text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
+            <Tag size={11} /> 按标签筛选
+          </span>
+          <div className="flex flex-wrap gap-2">
+            {allTags.map(tag => (
+              <button
+                key={tag}
+                onClick={() => toggleTag(tag)}
+                className={`px-4 py-1.5 rounded-full text-xs font-medium border transition-all ${
+                  selectedTags.includes(tag) 
+                    ? 'bg-indigo-500/20 border-indigo-500/40 text-indigo-300 shadow-[0_0_12px_rgba(99,102,241,0.2)]' 
+                    : 'border-white/8 text-slate-400 hover:text-white hover:border-white/20 bg-white/[0.02]'
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Tag Distribution Chart */}
+        {showChart && tagDistribution.length > 0 && (
+          <div className="pt-4 border-t border-white/5 space-y-3">
+            <h4 className="text-xs text-slate-400 font-medium">
+              标签分布 · 当前 {filteredAndSortedAds.length} 条素材
+            </h4>
+            <div className="space-y-2">
+              {tagDistribution.map(([tag, count]) => (
+                <div key={tag} className="flex items-center gap-3 group/bar">
+                  <span className="text-[11px] text-slate-400 w-20 text-right shrink-0 group-hover/bar:text-white transition-colors">{tag}</span>
+                  <div className="flex-1 h-7 bg-white/[0.03] rounded-lg overflow-hidden relative">
+                    <div
+                      className="h-full rounded-lg transition-all duration-500 flex items-center justify-end pr-2"
+                      style={{
+                        width: `${Math.max((count / maxTagCount) * 100, 8)}%`,
+                        background: selectedTags.includes(tag) 
+                          ? 'linear-gradient(90deg, rgba(99,102,241,0.4), rgba(99,102,241,0.6))'
+                          : 'linear-gradient(90deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1))'
+                      }}
+                    >
+                      <span className="text-[10px] font-bold text-white/70">{count}</span>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => toggleTag(tag)}
+                    className={`text-[10px] px-2 py-0.5 rounded-full border transition-all shrink-0 ${
+                      selectedTags.includes(tag) ? 'border-indigo-500/40 text-indigo-300 bg-indigo-500/10' : 'border-white/10 text-slate-500 hover:text-white'
+                    }`}
+                  >
+                    {selectedTags.includes(tag) ? '已选' : '筛选'}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </section>
+
       {/* Grid Area */}
       <section className="space-y-6">
         <div className="flex items-center justify-between px-2">
           <h2 className="text-slate-400 text-sm font-medium">发现 ({filteredAndSortedAds.length} 条爆款素材)</h2>
+          {hasActiveFilters && (
+            <div className="flex items-center gap-2 text-xs text-slate-500">
+              {selectedCategory && <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">{selectedCategory}</span>}
+              {selectedTags.map(t => <span key={t} className="px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">{t}</span>)}
+            </div>
+          )}
         </div>
 
         {filteredAndSortedAds.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 md:gap-8">
             {filteredAndSortedAds.map((ad, idx) => (
-              <AdCard key={ad.id} ad={ad} rank={adsData.indexOf(ad) + 1} onClick={setSelectedAd} />
+              <AdCard key={ad.id} ad={ad} rank={idx + 1} onClick={setSelectedAd} />
             ))}
           </div>
         ) : (
           <div className="glass rounded-[40px] border-dashed border-2 py-32 flex flex-col items-center gap-4">
             <p className="text-slate-500">未找到相关素材</p>
-            <button onClick={() => setSearchTerm('')} className="text-indigo-400 text-sm hover:underline">清空搜索条件</button>
+            <button onClick={clearAllFilters} className="text-indigo-400 text-sm hover:underline">清空所有筛选条件</button>
           </div>
         )}
       </section>
@@ -115,7 +280,7 @@ export default function Home() {
         &copy; 2026 AdVision Studio. For Internal Team Use Only.
       </footer>
 
-      {/* Video Modal for Sound Playback */}
+      {/* Video Modal */}
       {selectedAd && (
         <div 
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
@@ -123,7 +288,7 @@ export default function Home() {
         >
           <div 
             className="relative w-full max-w-[400px] aspect-[9/16] bg-black rounded-[32px] overflow-hidden shadow-2xl border border-white/10"
-            onClick={e => e.stopPropagation()}
+            onClick={(e: React.MouseEvent) => e.stopPropagation()}
           >
             <button 
               onClick={() => setSelectedAd(null)} 
@@ -140,7 +305,19 @@ export default function Home() {
             {/* Ad Info Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent pointer-events-none">
               <h3 className="text-white font-medium text-sm line-clamp-3 mb-2">{selectedAd.title}</h3>
-              <p className="text-emerald-400 text-xs font-bold">{selectedAd.impressions.toLocaleString()} 曝光</p>
+              <div className="flex items-center gap-2">
+                {selectedAd.category && (
+                  <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] border border-emerald-500/20">{selectedAd.category}</span>
+                )}
+                <span className="text-emerald-400 text-xs font-bold">{selectedAd.impressions.toLocaleString()} 曝光</span>
+              </div>
+              {selectedAd.tags && selectedAd.tags.length > 0 && (
+                <div className="flex flex-wrap gap-1.5 mt-2">
+                  {selectedAd.tags.map(tag => (
+                    <span key={tag} className="px-2 py-0.5 rounded-full bg-white/10 text-white/70 text-[10px]">{tag}</span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

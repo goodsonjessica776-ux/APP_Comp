@@ -295,6 +295,13 @@ def fetch_ads():
         if not video_url:
             continue
 
+        import random
+        mock_categories = ["游戏", "电商", "社交", "工具", "教育", "生活服务"]
+        mock_tags = ["实拍演示", "动画", "口播", "剧情", "测评", "促销", "明星代言", "第一人称", "数据对比", "高能混剪"]
+        
+        assigned_category = random.choice(mock_categories)
+        assigned_tags = random.sample(mock_tags, random.randint(2, 4))
+        
         filename = download_video(title, video_url, video_id, out_dir)
         if filename:
             # 加入 Dashboard 的结构中
@@ -304,6 +311,8 @@ def fetch_ads():
                 "impressions": impressions,
                 "videoName": filename,
                 "date": date,
+                "category": assigned_category,
+                "tags": assigned_tags
             })
             
     print(f"\\n🎉 采集完毕，共成功下载并处理 {len(extracted_data)} 个视频！")

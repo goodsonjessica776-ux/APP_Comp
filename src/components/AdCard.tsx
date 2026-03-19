@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from 'react';
-import { Eye, TrendingUp, CalendarDays } from 'lucide-react';
+import { Eye, TrendingUp, CalendarDays, Video, FileText } from 'lucide-react';
 
 interface AdItem {
   id: string;
@@ -9,11 +9,14 @@ interface AdItem {
   impressions: string | number;
   videoName: string;
   date: string;
+  category?: string;
+  tags?: string[];
 }
 
 export default function AdCard({ ad, rank, onClick }: { ad: AdItem; rank: number; onClick?: (ad: AdItem) => void }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showText, setShowText] = useState(false);
 
   const formatDisplay = (val: string | number) => {
     if (typeof val === 'string') return val;
@@ -23,13 +26,23 @@ export default function AdCard({ ad, rank, onClick }: { ad: AdItem; rank: number
   };
 
   const handleMouseEnter = () => {
-    if (videoRef.current) {
+    if (videoRef.current && !showText) {
       videoRef.current.play().catch(() => {});
       setIsPlaying(true);
     }
   };
 
   const handleMouseLeave = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+      setIsPlaying(false);
+    }
+  };
+
+  const toggleView = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setShowText(!showText);
     if (videoRef.current) {
       videoRef.current.pause();
       videoRef.current.currentTime = 0;
@@ -44,41 +57,97 @@ export default function AdCard({ ad, rank, onClick }: { ad: AdItem; rank: number
       onMouseLeave={handleMouseLeave}
       onClick={() => onClick && onClick(ad)}
     >
-      {/* Absolute Ranking Badge */}
+      {/* Ranking Badge */}
       <div className={`absolute top-4 left-4 z-20 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-xl
         ${rank <= 3 ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-white' : 'bg-white/10 text-slate-300'}`}>
         {rank <= 3 ? `Top ${rank}` : `No. ${rank}`}
       </div>
 
-      {/* Video Container */}
+      {/* Toggle Button - Video/Text */}
+      <button
+        onClick={toggleView}
+        className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-black/50 backdrop-blur-md border border-white/15 flex items-center justify-center text-white/70 hover:text-white hover:bg-black/70 transition-all hover:scale-110"
+        title={showText ? '切换至视频' : '切换至文案'}
+      >
+        {showText ? <Video size={15} /> : <FileText size={15} />}
+      </button>
+
+      {/* Media Container */}
       <div className="aspect-[9/16] bg-black relative overflow-hidden">
-        <video 
-          ref={videoRef}
-          loop 
-          muted 
-          playsInline
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        >
-          <source src={`/videos/${ad.videoName}`} type="video/mp4" />
-        </video>
-        
-        {/* Play Overlay */}
-        {!isPlaying && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
-            <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
-              <Eye className="w-5 h-5 text-white/70" />
+        {showText ? (
+          /* Text Mode */
+          <div className="w-full h-full bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 p-6 flex flex-col justify-between">
+            <div className="space-y-4 flex-1 overflow-y-auto">
+              <div className="inline-block px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-[10px] font-semibold uppercase tracking-wider border border-indigo-500/20">
+                广告文案
+              </div>
+              <p className="text-white/90 text-sm leading-relaxed font-medium">
+                {ad.title}
+              </p>
+              {ad.category && (
+                <div className="pt-3 border-t border-white/5">
+                  <span className="text-[10px] text-slate-500 uppercase tracking-wider">产品类目</span>
+                  <p className="text-indigo-400 text-xs font-semibold mt-1">{ad.category}</p>
+                </div>
+              )}
             </div>
+            {/* Tags in text mode */}
+            {ad.tags && ad.tags.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+                {ad.tags.map(tag => (
+                  <span key={tag} className="px-2 py-0.5 rounded-full bg-white/5 text-[10px] text-slate-400 border border-white/5">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
+        ) : (
+          /* Video Mode */
+          <>
+            <video 
+              ref={videoRef}
+              loop 
+              muted 
+              playsInline
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            >
+              <source src={`/videos/${ad.videoName}`} type="video/mp4" />
+            </video>
+            {!isPlaying && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
+                <div className="w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
+                  <Eye className="w-5 h-5 text-white/70" />
+                </div>
+              </div>
+            )}
+          </>
         )}
       </div>
 
-      {/* Content */}
-      <div className="p-6 flex flex-col flex-grow space-y-4">
+      {/* Content Footer */}
+      <div className="p-5 flex flex-col flex-grow space-y-3">
         <h3 className="text-sm font-semibold leading-relaxed line-clamp-2 h-10 group-hover:text-indigo-400 transition-colors">
           {ad.title}
         </h3>
+
+        {/* Tags Row */}
+        {ad.tags && ad.tags.length > 0 && !showText && (
+          <div className="flex flex-wrap gap-1.5">
+            {ad.tags.slice(0, 3).map(tag => (
+              <span key={tag} className="px-2 py-0.5 rounded-full bg-indigo-500/10 text-[10px] text-indigo-300 border border-indigo-500/15 font-medium">
+                {tag}
+              </span>
+            ))}
+            {ad.tags.length > 3 && (
+              <span className="px-2 py-0.5 rounded-full bg-white/5 text-[10px] text-slate-500">
+                +{ad.tags.length - 3}
+              </span>
+            )}
+          </div>
+        )}
         
-        <div className="pt-4 border-t border-white/5 flex items-center justify-between">
+        <div className="pt-3 border-t border-white/5 flex items-center justify-between">
           <div className="space-y-1">
             <span className="text-[10px] text-slate-500 uppercase tracking-tight flex items-center gap-1">
               <TrendingUp size={12} /> 预估曝光

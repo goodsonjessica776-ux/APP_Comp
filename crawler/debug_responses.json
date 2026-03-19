@@ -1,0 +1,4568 @@
+[
+  {
+    "url": "https://posthog.youcloud.com/e/?ip=1&_=1773896498184&ver=1.101.0",
+    "data": {
+      "status": 1
+    }
+  },
+  {
+    "url": "https://posthog.youcloud.com/decide/?v=3&ip=1&_=1773896498191&ver=1.101.0",
+    "data": {
+      "config": {
+        "enable_collect_everything": true
+      },
+      "toolbarParams": {},
+      "isAuthenticated": false,
+      "supportedCompression": [
+        "gzip",
+        "gzip-js"
+      ],
+      "featureFlags": {
+        "testtest": false,
+        "survey-targeting-appgrowing-global-survey-test": false,
+        "survey-targeting-jssdk2-nps": false,
+        "v5_6_0-kuaixp-data": false
+      },
+      "sessionRecording": false,
+      "errorsWhileComputingFlags": false,
+      "featureFlagPayloads": {},
+      "capturePerformance": false,
+      "autocapture_opt_out": false,
+      "autocaptureExceptions": false,
+      "surveys": true,
+      "siteApps": []
+    }
+  },
+  {
+    "url": "https://api-appgrowing-cn.youcloud.com/graphql",
+    "data": {
+      "errors": [
+        {
+          "message": null,
+          "extensions": {
+            "c": "05:403005",
+            "m": "登录已失效，请重新登录",
+            "code": 400,
+            "exception": null,
+            "silent": false,
+            "traceId": "287d04a6532db31c39ae6885daa59760"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://posthog.youcloud.com/api/surveys/?token=oEY7uwNI-BrLK7aN1Al8D1-abXKFEeENlm9zn5gOvzM&ip=1&_=1773896499864&ver=1.101.0",
+    "data": {
+      "surveys": [
+        {
+          "id": "019156c9-4836-0000-e29d-3baa4ec9fbf3",
+          "name": "Goodsfox工作台调研",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 5,
+              "display": "number",
+              "question": "您觉得工作台好用吗?",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "很不好用",
+              "upperBoundLabel": "很好用"
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "您认为还可以怎么提升？",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://goodsfox.youcloud.com",
+            "selector": "html[lang=zh] .ymc-nav-avatar",
+            "urlMatchType": "exact",
+            "seenSurveyWaitPeriodInDays": 30
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#eeeded",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "我们致力于为您提供更好的服务，感谢您的反馈！",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black"
+          },
+          "start_date": null,
+          "end_date": null
+        },
+        {
+          "id": "01915703-a7ab-0000-601b-4842ff456bde",
+          "name": "Goodsfox满意度调研",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 10,
+              "display": "number",
+              "question": "您愿意将 GoodsFox 推荐给朋友？",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "",
+              "upperBoundLabel": ""
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "找不到想看的品牌？",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://goodsfox.youcloud.com/",
+            "selector": "html[lang=zh] .ymc-nav-avatar",
+            "seenSurveyWaitPeriodInDays": 30
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#eeeded",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "我们致力于为您提供更好的服务，感谢您的反馈！",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black"
+          },
+          "start_date": null,
+          "end_date": null
+        },
+        {
+          "id": "01903659-621d-0000-46bb-bec1596e75e1",
+          "name": "电商商品-品牌推广排行（AG国内）",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 10,
+              "display": "number",
+              "question": "您愿意向他人推荐品牌推广排行榜吗?",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "很不满意",
+              "upperBoundLabel": "十分满意"
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "您觉得哪些方面可以做得更好？（选填）",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://appgrowing-cn.youcloud.com/leaflet/brand",
+            "selector": ".ymc-nav-avatar",
+            "seenSurveyWaitPeriodInDays": 90
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#fff",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "感谢你的反馈~",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black",
+            "thankYouMessageDescription": ""
+          },
+          "start_date": "2024-06-20T16:01:08.852000Z",
+          "end_date": null
+        },
+        {
+          "id": "01915707-5daa-0000-ad63-d83c23311a9b",
+          "name": "Goodsfox营销日历问卷",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 5,
+              "display": "number",
+              "question": "您认为营销日历好用吗？",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "很不好用",
+              "upperBoundLabel": "很好用"
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "我们可以怎样提高？",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://goodsfox.youcloud.com/saleCalendar",
+            "selector": "html[lang=zh] .ymc-nav-avatar",
+            "seenSurveyWaitPeriodInDays": 30
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#eeeded",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "我们致力于为您提供更好的服务，感谢您的反馈！",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black"
+          },
+          "start_date": null,
+          "end_date": null
+        },
+        {
+          "id": "0190366c-fe6b-0000-176b-9a8a63d81b1c",
+          "name": "线索收集-品牌推广排行（AG国内）",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 10,
+              "display": "number",
+              "question": "您愿意向他人推荐品牌推广排行榜吗?",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "很不满意",
+              "upperBoundLabel": "十分满意"
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "您觉得哪些方面可以做得更好？（选填）",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://appgrowing-cn.youcloud.com/clue/brand",
+            "selector": ".ymc-nav-avatar",
+            "seenSurveyWaitPeriodInDays": 90
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#fff",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "感谢你的反馈~",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black"
+          },
+          "start_date": "2024-06-20T16:12:40.491000Z",
+          "end_date": null
+        },
+        {
+          "id": "01903675-19b1-0000-cd2c-47e36b01f4a9",
+          "name": "AG全局问卷",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 10,
+              "display": "number",
+              "question": "您愿意向他人推荐AppGrowing中国版吗?",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "非常不愿意",
+              "upperBoundLabel": "非常愿意"
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "您觉得哪些功能可以做得更好？（选填）",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://appgrowing-cn.youcloud.com/",
+            "selector": ".ymc-nav-avatar",
+            "seenSurveyWaitPeriodInDays": 90
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#fff",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "我们致力于为您提供更好的服务，感谢您的反馈！",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black"
+          },
+          "start_date": "2024-06-20T16:21:26.130000Z",
+          "end_date": null
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://posthog.youcloud.com/e/?compression=gzip-js&ip=1&_=1773896501214&ver=1.101.0",
+    "data": {
+      "status": 1
+    }
+  },
+  {
+    "url": "https://edge-api.meiqia.com/summer/widget/route/match",
+    "data": {
+      "code": 1,
+      "success": true,
+      "msg": "操作成功",
+      "data": {
+        "entToken": "f70fe1324abcb64863a03c82c64ea96e",
+        "appName": "https://static.meiqia.com/fe-widget/v1.5.6.prod.20260306_165/app-v1.5.6.prod.20260306_165.js",
+        "vendorName": "https://static.meiqia.com/fe-widget/v1.5.6.prod.20260306_165/vendor-1.0.0.js",
+        "MQ_VISITOR_EDGE_API": "https://edge-api.meiqia.com",
+        "MQ_VISITOR_URL": "https://visitor-static.meiqia.com",
+        "entrypointName": "https://static.meiqia.com/fe-widget/v1.5.6.prod.20260306_165/entrypoint-v1.5.6.prod.20260306_165.js",
+        "MQ_VISITOR_BACKEND_API": "https://visitor-api.meiqiacloud.com",
+        "MQ_WIDGET_BFF_API": "https://new-api.meiqia.com",
+        "backendApi": "https://new-api.meiqia.com",
+        "MQ_EDGE_API": "https://edge-api.meiqia.com",
+        "appId": 4,
+        "publicUrl": "https://static.meiqia.com/fe-widget/v1.5.6.prod.20260306_165/",
+        "socketUrl": "https://camorope-client-a.meiqia.com/push",
+        "MQ_VISITOR_WIDGET_BFF_API": "https://visitor-api.meiqiacloud.com",
+        "MQ_VISITOR_SOCKET_URL": "https://visitor-live.meiqiacloud.com/push"
+      }
+    }
+  },
+  {
+    "url": "https://auth.youcloud.com/lang/lang-zh.json",
+    "data": {
+      " 正在邀请您加入企业": " 正在邀请您加入企业",
+      "${quotaInfo.used || 0}/${quotaInfo.quota || 0}": "${quotaInfo.used || 0}/${quotaInfo.quota || 0}",
+      "0-100w": "0-100w",
+      "101w-500w": "101w-500w",
+      "501w-1000w": "501w-1000w",
+      "<span class=\"theme-color number\">{successNumber}</span>个文案新建成功，<span class=\"theme-color number\">{failureList}</span>个文案新建失败": "<span class=\"theme-color number\">{successNumber}</span>个文案新建成功，<span class=\"theme-color number\">{failureList}</span>个文案新建失败",
+      "AI 仿写": "AI 仿写",
+      "AI 分析飞快生成中，请勿关闭页面，否则次数依然会扣除": "AI 分析飞快生成中，请勿关闭页面，否则次数依然会扣除",
+      "AI 创作-生成记录": "AI 创作-生成记录",
+      "AI 生成文案": "AI 生成文案",
+      "AI 趋势分析": "AI 趋势分析",
+      "AppGrowing - 国内App投放数据分析工具": "AppGrowing - 国内App投放数据分析工具",
+      "AppGrowing - 国内移动广告数据分析平台": "AppGrowing - 国内移动广告数据分析平台",
+      "AppGrowing 国际版 - 全球移动广告策略分析平台": "AppGrowing 国际版 - 全球移动广告策略分析平台",
+      "AppGrowing国际版 - 全球移动广告数据分析平台": "AppGrowing国际版 - 全球移动广告数据分析平台",
+      "CEO/创始人": "CEO/创始人",
+      "CMO/市场总监": "CMO/市场总监",
+      "GoodsFox - 全球消费品牌营销数据研究平台": "GoodsFox - 全球消费品牌营销数据研究平台",
+      "cloudflare验证加载失败，请检查网络": "cloudflare验证加载失败，请检查网络",
+      "ip段登陆数超过最大限制": "ip段登陆数超过最大限制",
+      "openDefaultBrowser错误 \\n config:fail：{message}": "openDefaultBrowser错误 \\n config:fail：{message}",
+      "session_id不能为空": "session_id不能为空",
+      "{days}天{hours}时{minutes}分{seconds}秒": "{days}天{hours}时{minutes}分{seconds}秒",
+      "{hours}时{minutes}分{seconds}秒": "{hours}时{minutes}分{seconds}秒",
+      "{minutes}分{seconds}秒": "{minutes}分{seconds}秒",
+      "《有米云产品服务合同》第4.4条的约定或侵害本系统数据安全的行为，已触发系统自动封禁措施，目前账号已封禁。": "《有米云产品服务合同》第4.4条的约定或侵害本系统数据安全的行为，已触发系统自动封禁措施，目前账号已封禁。",
+      "《有米云用户使用协议》": "《有米云用户使用协议》",
+      "《有米云用户使用协议》和《隐私政策》已更新": "《有米云用户使用协议》和《隐私政策》已更新",
+      "《有米云用户协议》": "《有米云用户协议》",
+      "《用户使用协议》": "《用户使用协议》",
+      "《隐私政策》": "《隐私政策》",
+      "【登录页面地址】": "【登录页面地址】",
+      "一级文件夹不可使用 ‘未分类’/‘No Category’ 命名": "一级文件夹不可使用 ‘未分类’/‘No Category’ 命名",
+      "一键复制反馈": "一键复制反馈",
+      "下一步将打开企业微信授权页面，为了给您注册账号，请务必勾选“手机号”，然后点击“同意”。": "下一步将打开企业微信授权页面，为了给您注册账号，请务必勾选“手机号”，然后点击“同意”。",
+      "下次再说": "下次再说",
+      "不同意": "不同意",
+      "不同的功能会对应扣减不同的点数；": "不同的功能会对应扣减不同的点数；",
+      "不支持使用特殊符号~!@#$%^&\"`\\": "不支持使用特殊符号~!@#$%^&\"`\\",
+      "不支持输入 emoji 表情": "不支持输入 emoji 表情",
+      "与手机号完成绑定后即可进入后台": "与手机号完成绑定后即可进入后台",
+      "与目标位置的文件夹名称重复": "与目标位置的文件夹名称重复",
+      "专属客户经理": "专属客户经理",
+      "两次密码不一致": "两次密码不一致",
+      "中国大陆": "中国大陆",
+      "为保障你的合法权益，": "为保障你的合法权益，",
+      "为更好地满足您数据需要": "为更好地满足您数据需要",
+      "二维码已失效": "二维码已失效",
+      "二维码已超时": "二维码已超时",
+      "产品名称": "产品名称",
+      "产品名称需在 10 个字以内": "产品名称需在 10 个字以内",
+      "产品研发": "产品研发",
+      "产品经理": "产品经理",
+      "产品选择": "产品选择",
+      "以下是辅助排查问题的信息，可用于反馈给客服解决问题。": "以下是辅助排查问题的信息，可用于反馈给客服解决问题。",
+      "仿写文案": "仿写文案",
+      "仿写结果生成中，关闭页面也会扣减使用次数，生成结果可前往<a class='theme-color' target='_blank' href='${adguanjiaDomain}/youshu/AI-tools/AI-record?AIType=AIGC_COMPLETION_SCENE_AD_TITLE'>【AI创作-生成记录】</a>查看，是否确定？": "仿写结果生成中，关闭页面也会扣减使用次数，生成结果可前往<a class='theme-color' target='_blank' href='${adguanjiaDomain}/youshu/AI-tools/AI-record?AIType=AIGC_COMPLETION_SCENE_AD_TITLE'>【AI创作-生成记录】</a>查看，是否确定？",
+      "企业内【AI 创作工具包】累计 ${copilotInfo.quota} 次生成机会，选择分析内容后点击【分析】即记为 1 次，相同分析内容可生成不同结果，现已使用 ${copilotInfo.used} 次": "企业内【AI 创作工具包】累计 ${copilotInfo.quota} 次生成机会，选择分析内容后点击【分析】即记为 1 次，相同分析内容可生成不同结果，现已使用 ${copilotInfo.used} 次",
+      "企业剩余点数<span class='num-text'>{remaining}</span>": "企业剩余点数<span class='num-text'>{remaining}</span>",
+      "企业容量不足，无法收集该视频": "企业容量不足，无法收集该视频",
+      "企业已用点数<span class='num-text'>{used}</span>": "企业已用点数<span class='num-text'>{used}</span>",
+      "企业微信授权指引": "企业微信授权指引",
+      "企业累计点数<span class='num-text'>{quota}</span>": "企业累计点数<span class='num-text'>{quota}</span>",
+      "企微未绑定账号，请参考相关文档进行绑定": "企微未绑定账号，请参考相关文档进行绑定",
+      "使用openLink失败： \\n' {message}": "使用openLink失败： \\n' {message}",
+      "使用高级版期间您可以享有以下权益：": "使用高级版期间您可以享有以下权益：",
+      "保存成功": "保存成功",
+      "修改成功": "修改成功",
+      "修改标签": "修改标签",
+      "免登失败": "免登失败",
+      "免费使用 GoodsFox": "免费使用 GoodsFox",
+      "免费试用": "免费试用",
+      "全功能免费": "全功能免费",
+      "全选": "全选",
+      "关注": "关注",
+      "关注成功": "关注成功",
+      "关联中...": "关联中...",
+      "关联已有的有米云手机号": "关联已有的有米云手机号",
+      "关联已有的有米云账号": "关联已有的有米云账号",
+      "关联已有账号": "关联已有账号",
+      "关联账号无效，此账号还未注册有米云": "关联账号无效，此账号还未注册有米云",
+      "关闭页面后生成内容将被清空，确定要离开吗？": "关闭页面后生成内容将被清空，确定要离开吗？",
+      "其他": "其他",
+      "内容创作": "内容创作",
+      "内容编辑": "内容编辑",
+      "再次发送": "再次发送",
+      "分析次数 ${copilotInfo.used || 0}/${copilotInfo.quota || 0}": "分析次数 ${copilotInfo.used || 0}/${copilotInfo.quota || 0}",
+      "分析次数已使用完，请联系客服解决": "分析次数已使用完，请联系客服解决",
+      "分析点数不足，请联系客服解决": "分析点数不足，请联系客服解决",
+      "分析类型：": "分析类型：",
+      "分析结果：": "分析结果：",
+      "切换至": "切换至",
+      "切换至 AppGrowing 中国版": "切换至 AppGrowing 中国版",
+      "切换至 AppGrowing 国际版": "切换至 AppGrowing 国际版",
+      "切换至 {brand}": "切换至 {brand}",
+      "删除标签": "删除标签",
+      "删除标签后与之相关的关注信息将一并删除。": "删除标签后与之相关的关注信息将一并删除。",
+      "删除标签后与之相关的收藏信息将一并删除。": "删除标签后与之相关的收藏信息将一并删除。",
+      "刷新": "刷新",
+      "加入团队失败请返回重试": "加入团队失败请返回重试",
+      "医疗健康": "医疗健康",
+      "协议更新": "协议更新",
+      "去升级套餐": "去升级套餐",
+      "去看看": "去看看",
+      "参数错误": "参数错误",
+      "发送成功": "发送成功",
+      "发送成功，有效激活时间30分钟": "发送成功，有效激活时间30分钟",
+      "发送验证码": "发送验证码",
+      "取消": "取消",
+      "取消关注": "取消关注",
+      "取消关注成功": "取消关注成功",
+      "取消收藏": "取消收藏",
+      "取消收藏成功": "取消收藏成功",
+      "可能被邮箱过滤，请到广告邮件、垃圾邮件或者相关的邮件归档中查看。": "可能被邮箱过滤，请到广告邮件、垃圾邮件或者相关的邮件归档中查看。",
+      "同意": "同意",
+      "名称不能为空哦": "名称不能为空哦",
+      "名称最多输入50个字": "名称最多输入50个字",
+      "名称：": "名称：",
+      "向右拖动滑块进行注册": "",
+      "品牌名": "品牌名",
+      "品牌名称需在 10 个字以内": "品牌名称需在 10 个字以内",
+      "品牌运营": "品牌运营",
+      "唤起滑动验证": "唤起滑动验证",
+      "回复了你": "回复了你",
+      "因您所使用的账号存在{text}，已触发系统自动封禁措施，目前账号已封禁。": "因您所使用的账号存在{text}，已触发系统自动封禁措施，目前账号已封禁。",
+      "因您所使用的账号存在涉嫌违反{text}": "因您所使用的账号存在涉嫌违反{text}",
+      "声明丨有米科技依法打击非法获取数据、共享账号等违法行为的声明": "声明丨有米科技依法打击非法获取数据、共享账号等违法行为的声明",
+      "复制": "复制",
+      "复制成功": "复制成功",
+      "复制成功！": "复制成功！",
+      "复制文案": "复制文案",
+      "多次尝试无法解决？一键复制，联系客服解决。": "多次尝试无法解决？一键复制，联系客服解决。",
+      "多次尝试无法解决？可以点击下面按钮，联系客服解决。": "多次尝试无法解决？可以点击下面按钮，联系客服解决。",
+      "大于1000w": "大于1000w",
+      "大陆号码不需要填写区号，港澳台及国际号码需要填写区号，以美国号码区号“1”示例“+180xxxxxx78”": "大陆号码不需要填写区号，港澳台及国际号码需要填写区号，以美国号码区号“1”示例“+180xxxxxx78”",
+      "天": "天",
+      "天 | 天": "天 | 天",
+      "失败原因": "失败原因",
+      "好的": "好的",
+      "如需突出品牌名，可输入品牌名称使生成内容更贴合使用场景": "如需突出品牌名，可输入品牌名称使生成内容更贴合使用场景",
+      "婚纱摄影": "婚纱摄影",
+      "完成登录/注册即可快速加入企业": "完成登录/注册即可快速加入企业",
+      "实在不行，没关系，请联系我们的客服。": "实在不行，没关系，请联系我们的客服。",
+      "客服电话: 400 822 8666": "客服电话: 400 822 8666",
+      "客服邮箱: bmd@youmi.net": "客服邮箱: bmd@youmi.net",
+      "密码不能为空": "密码不能为空",
+      "密码必须大于等于6位": "密码必须大于等于6位",
+      "密码登录": "密码登录",
+      "密码错误": "密码错误",
+      "尊敬的有米云会员：": "尊敬的有米云会员：",
+      "尝试次数过多，请改用其他方式": "尝试次数过多，请改用其他方式",
+      "尝试次数过多，请改用其他登录方式": "尝试次数过多，请改用其他登录方式",
+      "工作岗位": "工作岗位",
+      "工作职责": "工作职责",
+      "已关注": "已关注",
+      "已收藏": "已收藏",
+      "已有的有米云账号和当前授权的钉钉账号需保持一致，如不一致则无法关联账号。如需修改有米云账号请联系与您对接的有米云工作人员": "已有的有米云账号和当前授权的钉钉账号需保持一致，如不一致则无法关联账号。如需修改有米云账号请联系与您对接的有米云工作人员",
+      "已有的有米云账号和当前授权的飞书账号需保持一致，如不一致则无法关联账号。如需修改有米云账号请联系与您对接的有米云工作人员": "已有的有米云账号和当前授权的飞书账号需保持一致，如不一致则无法关联账号。如需修改有米云账号请联系与您对接的有米云工作人员",
+      "已过期": "已过期",
+      "已违反《有米云产品服务合同》第4.4条的约定或《有米云代理合同》及《有米云代理商管理办法》等相关管理政策的规定": "已违反《有米云产品服务合同》第4.4条的约定或《有米云代理合同》及《有米云代理商管理办法》等相关管理政策的规定",
+      "已阅读并同意": "已阅读并同意",
+      "已阅读并同意{agreement}和{privacy}": "已阅读并同意{agreement}和{privacy}",
+      "已验证，直接登录": "已验证，直接登录",
+      "市场营销": "市场营销",
+      "帐号已存在": "帐号已存在",
+      "帐号已激活": "帐号已激活",
+      "年投流规模": "年投流规模",
+      "广告代理": "广告代理",
+      "广告投放": "广告投放",
+      "广告设计": "广告设计",
+      "开通": "开通",
+      "开通 App Growing": "开通 App Growing",
+      "开通 App Growing Global": "开通 App Growing Global",
+      "开通 AppGrowing": "开通 AppGrowing",
+      "开通 AppGrowing Global": "开通 AppGrowing Global",
+      "开通 GoodsFox": "开通 GoodsFox",
+      "开通 GoodsFox Fashion": "开通 GoodsFox Fashion",
+      "开通 Goodspi": "开通 Goodspi",
+      "开通 {brand}": "开通 {brand}",
+      "开通CC数据": "开通CC数据",
+      "开通CC数据抖音版": "开通CC数据抖音版",
+      "开通优FO社区": "开通优FO社区",
+      "开通快选品": "开通快选品",
+      "开通投管家": "开通投管家",
+      "当前操作或网络环境存在异常，请稍后再试": "当前操作或网络环境存在异常，请稍后再试",
+      "当前浏览器不支持一键复制，请手动复制": "当前浏览器不支持一键复制，请手动复制",
+      "当前网络环境异常": "当前网络环境异常",
+      "当前视频不支持预览": "当前视频不支持预览",
+      "当前页面无数据，无法进行分析，请重新筛选数据后再操作 ": "当前页面无数据，无法进行分析，请重新筛选数据后再操作 ",
+      "当天广告总数": "当天广告总数",
+      "当天新广告": "当天新广告",
+      "微信": "微信",
+      "微信union_id不能为空": "微信union_id不能为空",
+      "微信扫码免费体验产品": "微信扫码免费体验产品",
+      "微信扫码关注公众号即可登录": "微信扫码关注公众号即可登录",
+      "微信扫码登录": "微信扫码登录",
+      "忘记密码": "忘记密码",
+      "快去添加吧！": "快去添加吧！",
+      "您不在该团队": "您不在该团队",
+      "您可以尝试再次发送。 点击{resend}": "您可以尝试再次发送。 点击{resend}",
+      "您好，": "您好，",
+      "您已加入企业": "您已加入企业",
+      "您当前没有席位，请联系管理员为您分配席位后进行访问~": "您当前没有席位，请联系管理员为您分配席位后进行访问~",
+      "您所在的企业暂无灵感库使用权限": "您所在的企业暂无灵感库使用权限",
+      "您的使用环境有风险，请稍后再试": "您的使用环境有风险，请稍后再试",
+      "您的账号未设置密码，请点击“忘记密码”进行设置": "您的账号未设置密码，请点击“忘记密码”进行设置",
+      "您确定要取消关注吗？": "您确定要取消关注吗？",
+      "您确定要取消收藏吗？": "您确定要取消收藏吗？",
+      "您还未接受企业的授权邀请": "您还未接受企业的授权邀请",
+      "感谢！您的反馈将有助于我们的改进": "感谢！您的反馈将有助于我们的改进",
+      "我们已经向您的邮箱: {email}发送了一封确认邮件。您需要在30分钟内点击邮件内的激活链接对账户进行激活。": "我们已经向您的邮箱: {email}发送了一封确认邮件。您需要在30分钟内点击邮件内的激活链接对账户进行激活。",
+      "我们已经向您的邮箱: {email}发送了一封确认邮件。您需要点击邮件内的激活链接对账户进行激活。": "我们已经向您的邮箱: {email}发送了一封确认邮件。您需要点击邮件内的激活链接对账户进行激活。",
+      "我们已经向您的邮箱: {resetEmail}发送了一封确认邮件。您需要点击邮件内的激活链接对账户进行激活。": "我们已经向您的邮箱: {resetEmail}发送了一封确认邮件。您需要点击邮件内的激活链接对账户进行激活。",
+      "我回复了{userName}": "我回复了{userName}",
+      "我已了解": "我已了解",
+      "我已知晓": "我已知晓",
+      "我提到了{userName}": "我提到了{userName}",
+      "我明白了，去授权": "我明白了，去授权",
+      "我评论了{userName}": "我评论了{userName}",
+      "房地产": "房地产",
+      "手机号": "手机号",
+      "手机号登录": "手机号登录",
+      "手机号码不能为空": "手机号码不能为空",
+      "手机注册": "手机注册",
+      "手机登录": "手机登录",
+      "手机重置": "手机重置",
+      "打开微信扫一扫，扫码即表示已阅读并同意{agreement}和{privacy}": "打开微信扫一扫，扫码即表示已阅读并同意{agreement}和{privacy}",
+      "扫码成功": "扫码成功",
+      "扫码注册": "扫码注册",
+      "扫码添加小助手领取7天高级版试用": "扫码添加小助手领取7天高级版试用",
+      "扫码登录": "扫码登录",
+      "批量保存至文案库": "批量保存至文案库",
+      "批量保存至文案库成功！": "批量保存至文案库成功！",
+      "批量复制": "批量复制",
+      "技术研发": "技术研发",
+      "投资机构": "投资机构",
+      "护肤美容": "护肤美容",
+      "授权应用不存在": "授权应用不存在",
+      "授权成功，请联系您的客成进行下一步操作": "授权成功，请联系您的客成进行下一步操作",
+      "授权未开启，请参考相关文档开启授权": "授权未开启，请参考相关文档开启授权",
+      "授权错误": "授权错误",
+      "授权错误 \\n {message}": "授权错误 \\n {message}",
+      "授权错误，请确保软件升级到最新": "授权错误，请确保软件升级到最新",
+      "提交": "提交",
+      "提交成功，跳转中...": "提交成功，跳转中...",
+      "提到了你": "提到了你",
+      "提示": "提示",
+      "搜索文件夹名": "搜索文件夹名",
+      "收藏": "收藏",
+      "收藏成功": "收藏成功",
+      "收集": "收集",
+      "收集失败": "收集失败",
+      "收集成功": "收集成功",
+      "教育": "教育",
+      "文件夹名称不可为空": "文件夹名称不可为空",
+      "文件夹名称不可超过20个字": "文件夹名称不可超过20个字",
+      "文件夹：": "文件夹：",
+      "文娱": "文娱",
+      "文案": "文案",
+      "文案需在 5～55 个字范围内": "文案需在 5～55 个字范围内",
+      "新增“{tagName}”标签": "新增“{tagName}”标签",
+      "新建文件夹": "新建文件夹",
+      "新旧密码不能一致": "新旧密码不能一致",
+      "新账号验证码错误": "新账号验证码错误",
+      "旧用户重置密码": "旧用户重置密码",
+      "是否删除标签？": "是否删除标签？",
+      "暂无关联标签": "暂无关联标签",
+      "暂无内容，请先输入文案并点击生成": "暂无内容，请先输入文案并点击生成",
+      "暂无数据": "暂无数据",
+      "暂无结果，请先选择分析类型再点击分析": "暂无结果，请先选择分析类型再点击分析",
+      "更换文件夹": "更换文件夹",
+      "更换标签": "更换标签",
+      "最多关联20个标签": "最多关联20个标签",
+      "最大值": "最大值",
+      "最小值": "最小值",
+      "最新行业报告": "最新行业报告",
+      "有帮助": "有帮助",
+      "有米云": "",
+      "有米云账号": "有米云账号",
+      "有米云账号与当前IM账号不匹配": "有米云账号与当前IM账号不匹配",
+      "有米有数 - 新电商营销大数据分析平台": "有米有数 - 新电商营销大数据分析平台",
+      "有米有数 - 直播带货数据分析工具": "有米有数 - 直播带货数据分析工具",
+      "服务内部错误": "服务内部错误",
+      "服务参数错误": "服务参数错误",
+      "服务已下线": "服务已下线",
+      "未收到验证邮件？": "未收到验证邮件？",
+      "本次【生成】将扣减 <span class='point'>{point}</span> 点数": "本次【生成】将扣减 <span class='point'>{point}</span> 点数",
+      "机器人正在飞快构思中，请勿关闭页面，否则次数依然会扣减": "机器人正在飞快构思中，请勿关闭页面，否则次数依然会扣减",
+      "权益计算说明": "权益计算说明",
+      "权限不足": "权限不足",
+      "权限不足，请联系客服升级权限后使用": "权限不足，请联系客服升级权限后使用",
+      "查看文案库": "查看文案库",
+      "查看文档": "查看文档",
+      "标签": "标签",
+      "标签名称不与已有标签名称重复": "标签名称不与已有标签名称重复",
+      "标签名称不超过20个字": "标签名称不超过20个字",
+      "标签已删除": "标签已删除",
+      "标签已存在": "标签已存在",
+      "标签：": "标签：",
+      "检查网络情况": "检查网络情况",
+      "欢迎为保障你的合法权益，": "欢迎为保障你的合法权益，",
+      "欢迎录": "欢迎录",
+      "欢迎注册": "欢迎注册",
+      "欢迎注册 AppGrowing": "欢迎注册 AppGrowing",
+      "欢迎注册 AppGrowing 中国版": "欢迎注册 AppGrowing 中国版",
+      "欢迎注册 AppGrowing 国际版": "欢迎注册 AppGrowing 国际版",
+      "欢迎注册 CC 数据": "欢迎注册 CC 数据",
+      "欢迎注册 CC 数据抖音版": "欢迎注册 CC 数据抖音版",
+      "欢迎注册 GoodsFox": "欢迎注册 Goodspi",
+      "欢迎注册 GoodsFox Fashion": "欢迎注册 GoodsFox Fashion",
+      "欢迎注册 Goodspi": "欢迎注册 Goodspi",
+      "欢迎注册 {brand}": "欢迎注册 {brand}",
+      "欢迎注册快选品": "欢迎注册快选品",
+      "欢迎注册投管家": "欢迎注册投管家",
+      "欢迎注册有米有数": "欢迎注册有米有数",
+      "欢迎登录": "欢迎登录",
+      "欢迎登录 AppGrowing": "欢迎登录 App Growing",
+      "欢迎登录 AppGrowing Global": "欢迎登录 App Growing Global",
+      "欢迎登录 AppGrowing 中国版": "欢迎登录 AppGrowing 中国版",
+      "欢迎登录 AppGrowing 国际版": "欢迎登录 AppGrowing 国际版",
+      "欢迎登录 GoodsFox": "欢迎登录 Goodspi",
+      "欢迎登录 GoodsFox Fashion": "欢迎登录 GoodsFox Fashion",
+      "欢迎登录 {brand}": "欢迎登录 {brand}",
+      "欢迎登录有米有数": "欢迎登录有米有数",
+      "正在登录中": "正在登录中",
+      "正在邀请您加入企业": "正在邀请您加入企业",
+      "汽车": "汽车",
+      "没帮助": "没帮助",
+      "注册": "注册",
+      "注册 - 有米云": "",
+      "注册中": "注册中",
+      "注册后": "注册后",
+      "注册失败，请稍后重试": "注册失败，请稍后重试",
+      "注册失败，请重新尝试": "注册失败，请重新尝试",
+      "注册成功": "注册成功",
+      "注册成功，正在进入...": "注册成功，正在进入...",
+      "注册新账号": "注册新账号",
+      "注册立即试用体验": "注册立即试用体验",
+      "注：请勿在非官方渠道购买有米云产品的账号，若出现账号异常，我司概不负责。": "注：请勿在非官方渠道购买有米云产品的账号，若出现账号异常，我司概不负责。",
+      "涉嫌违反《有米云产品服务合同》第4.4条的约定或《有米云代理合同》及《有米云代理商管理办法》等相关管理政策的规定或其他侵害本系统数据安全的行为": "涉嫌违反《有米云产品服务合同》第4.4条的约定或《有米云代理合同》及《有米云代理商管理办法》等相关管理政策的规定或其他侵害本系统数据安全的行为",
+      "添加关注": "添加关注",
+      "添加收藏": "添加收藏",
+      "温馨提示 \\n {message}": "温馨提示 \\n {message}",
+      "游戏": "游戏",
+      "滑块加载失败，请稍后刷新重试 {error}": "滑块加载失败，请稍后刷新重试 {error}",
+      "滑块验证不通过，请刷新重试": "滑块验证不通过，请刷新重试",
+      "滑块验证不通过，请刷新页面重试": "滑块验证不通过，请刷新页面重试",
+      "激活邮件已发送，请前往邮箱进行账号激活": "激活邮件已发送，请前往邮箱进行账号激活",
+      "激活邮件已失效，稍后为您重新发送": "激活邮件已失效，稍后为您重新发送",
+      "点【收集】可正常收集视频": "点【收集】可正常收集视频",
+      "点击刷新": "点击刷新",
+      "点数是有米云内部用于计量您所拥有的 AI 工具功能对应资源的货币单位；": "点数是有米云内部用于计量您所拥有的 AI 工具功能对应资源的货币单位；",
+      "生成中...": "生成中...",
+      "生成权益": "生成权益",
+      "生成结果": "生成结果",
+      "生成结果中包含 <span class='highlight'> 违规词</span>，已为您<span class='highlight'>高亮</span>处理，使用时请修改": "生成结果中包含 <span class='highlight'> 违规词</span>，已为您<span class='highlight'>高亮</span>处理，使用时请修改",
+      "用户ID不能为空": "用户ID不能为空",
+      "用户不存在": "用户不存在",
+      "用户协议及隐私保护": "用户协议及隐私保护",
+      "用户已加入企业": "用户已加入企业",
+      "用户已封禁": "用户已封禁",
+      "用户已注册": "用户已注册",
+      "用户授权失败，请参考相关文档开启授权": "用户授权失败，请参考相关文档开启授权",
+      "用户未登录": "用户未登录",
+      "用户未确认最新协议": "用户未确认最新协议",
+      "由于平台限制请前往{platform}使用钉钉扫码登录使用": "由于平台限制请前往{platform}使用钉钉扫码登录使用",
+      "电商": "电商",
+      "登录": "登录",
+      "登录 - 有米云": "",
+      "登录中": "登录中",
+      "登录即代表您同意{agreement}和{privacy}": "登录即代表您同意{agreement}和{privacy}",
+      "登录后": "登录后",
+      "登录失败，请重新尝试": "登录失败，请重新尝试",
+      "登录成功，正在进入...": "登录成功，正在进入...",
+      "登录重试": "登录重试",
+      "相同的内容输入可生成不同内容，都 会扣除相应点数。": "相同的内容输入可生成不同内容，都 会扣除相应点数。",
+      "相同输入内容每次点击【生成】，生成内容都将发生变化": "相同输入内容每次点击【生成】，生成内容都将发生变化",
+      "短信发送失败": "短信发送失败",
+      "短信发送限制": "短信发送限制",
+      "确定": "确定",
+      "确认": "确认",
+      "确认加入": "确认加入",
+      "确认绑定": "确认绑定",
+      "社交": "社交",
+      "立即使用": "立即使用",
+      "立即分析": "立即分析",
+      "立即更新": "立即更新",
+      "立即注册": "立即注册",
+      "立即生成": "立即生成",
+      "立即登录": "立即登录",
+      "立即领取": "立即领取",
+      "第三方登录": "第三方登录",
+      "管理标签": "管理标签",
+      "系统繁忙，请稍后再试": "系统繁忙，请稍后再试",
+      "系统错误": "系统错误",
+      "系统错误 \\n config:fail：{message}": "系统错误 \\n config:fail：{message}",
+      "系统错误 \\n error：{message}": "系统错误 \\n error：{message}",
+      "系统错误 \\n {message}": "系统错误 \\n {message}",
+      "经我司多方调查取证，发现您所使用的账号存在通过非法技术手段租赁/ 共享有米云账号等行为，{text}，同时涉嫌严重损害我司合法权益的侵权行为，情节严重的，可能构成非法获取计算机信息系统数据罪、非法控制计算机信息系统罪等刑事犯罪。": "经我司多方调查取证，发现您所使用的账号存在通过非法技术手段租赁/ 共享有米云账号等行为，{text}，同时涉嫌严重损害我司合法权益的侵权行为，情节严重的，可能构成非法获取计算机信息系统数据罪、非法控制计算机信息系统罪等刑事犯罪。",
+      "经我司多方调查取证，发现您所使用的账号存在通过非法技术手段租赁/ 共享有米云账号等行为，已违反《有米云产品服务合同》第4.4条的约定，同时涉嫌严重损害我司合法权益的侵权行为，情节严重的，可能构成非法获取计算机信息系统数据罪、非法控制计算机信息系统罪等刑事犯罪。": "经我司多方调查取证，发现您所使用的账号存在通过非法技术手段租赁/ 共享有米云账号等行为，已违反《有米云产品服务合同》第4.4条的约定，同时涉嫌严重损害我司合法权益的侵权行为，情节严重的，可能构成非法获取计算机信息系统数据罪、非法控制计算机信息系统罪等刑事犯罪。",
+      "绑定手机号": "绑定手机号",
+      "编辑标签": "编辑标签",
+      "缺少必填字段": "缺少必填字段",
+      "网络会有一定延迟，请等几分钟后再查看，激活有效时长为30分钟。": "网络会有一定延迟，请等几分钟后再查看，激活有效时长为30分钟。",
+      "网络会有一定的延迟，请等几分钟后再去看看。": "网络会有一定的延迟，请等几分钟后再去看看。",
+      "网络请求存在波动，加载失败，请刷新后重试。如多次遇到，请联系客服协助排查。": "网络请求存在波动，加载失败，请刷新后重试。如多次遇到，请联系客服协助排查。",
+      "网络错误": "网络错误",
+      "至少选择一个标签": "至少选择一个标签",
+      "若以上情况均无法解决，请联系客服。": "若以上情况均无法解决，请联系客服。",
+      "获取ticket失败": "获取ticket失败",
+      "行业信息": "行业信息",
+      "补充资料": "补充资料",
+      "补充资料免费领取 7 天高级版试用": "补充资料免费领取 7 天高级版试用",
+      "补全信息即可快速加入企业": "补全信息即可快速加入企业",
+      "计算规则详细说明": "计算规则详细说明",
+      "记住我": "记住我",
+      "访问过于频繁，请稍后再试": "访问过于频繁，请稍后再试",
+      "访问限制": "访问限制",
+      "评论了你": "评论了你",
+      "试用高级版期间您可以享有以下权益：": "试用高级版期间您可以享有以下权益：",
+      "该企业套餐坐席额度不足，无法加入企业": "该企业套餐坐席额度不足，无法加入企业",
+      "该应用限制注册": "该应用限制注册",
+      "该微信已绑定其他账号": "该微信已绑定其他账号",
+      "该手机号已经注册": "该手机号已经注册",
+      "该手机号已经注册过": "该手机号已经注册过",
+      "该账号在{team_name}下被限制使用，请切换企业使用。": "该账号在{team_name}下被限制使用，请切换企业使用。",
+      "该账号已绑定其他微信": "该账号已绑定其他微信",
+      "该账号已被限制ip使用": "该账号已被限制ip使用",
+      "该账号已被限制ip注册": "该账号已被限制ip注册",
+      "该账号已被限制ip登录": "该账号已被限制ip登录",
+      "该账号已被限制ip登陆": "该账号已被限制ip登陆",
+      "该账号还未激活，请前往邮箱进行账号激活": "该账号还未激活，请前往邮箱进行账号激活",
+      "该邮箱不支持注册，请切换邮箱账号": "该邮箱不支持注册，请切换邮箱账号",
+      "该邮箱已经注册过": "该邮箱已经注册过",
+      "该链接已失效，请联系管理员提供最新链接": "该链接已失效，请联系管理员提供最新链接",
+      "详细收集设置": "详细收集设置",
+      "说明内容最多输入150个字": "说明内容最多输入150个字",
+      "说明：": "说明：",
+      "请使用正确的微信号进行扫码验证": "请使用正确的微信号进行扫码验证",
+      "请先同意协议": "请先同意协议",
+      "请先完成滑动验证": "请先完成滑动验证",
+      "请先完成滑块验证": "请先完成滑块验证",
+      "请先新建标签": "请先新建标签",
+      "请再次输入密码": "请再次输入密码",
+      "请勿扫码": "请勿扫码",
+      "请在企业微信中打开": "请在企业微信中打开",
+      "请在钉钉的电脑端打开微应用～": "请在钉钉的电脑端打开微应用～",
+      "请在飞书的桌面端打开应用～": "请在飞书的桌面端打开应用～",
+      "请在飞书的电脑端打开应用～": "请在飞书的电脑端打开应用～",
+      "请填写密码": "请填写密码",
+      "请填写手机号": "请填写手机号",
+      "请填写正确的手机号": "请填写正确的手机号",
+      "请填写正确的手机号/邮箱格式": "请填写正确的手机号/邮箱格式",
+      "请填写正确的邮箱": "请填写正确的邮箱",
+      "请填写正确的验证码": "请填写正确的验证码",
+      "请填写渠道码": "请填写渠道码",
+      "请填写该项内容": "请填写该项内容",
+      "请填写账号": "请填写账号",
+      "请填写邀请码": "请填写邀请码",
+      "请填写邀请码（选填）": "请填写邀请码（选填）",
+      "请填写邮箱": "请填写邮箱",
+      "请填写长度超过六位的密码": "请填写长度超过六位的密码",
+      "请填写验证码": "请填写验证码",
+      "请检查授权码填写是否正确": "请检查授权码填写是否正确",
+      "请求异常，请稍后再试": "请求异常，请稍后再试",
+      "请求超时": "请求超时",
+      "请确认email地址是否拼写错误，若是，您可以用正确的邮件地址重新注册。": "请确认email地址是否拼写错误，若是，您可以用正确的邮件地址重新注册。",
+      "请确认一下 email 地址是否拼写错误，您可以用正确的邮件地址重新注册。": "请确认一下 email 地址是否拼写错误，您可以用正确的邮件地址重新注册。",
+      "请稍等...": "请稍等...",
+      "请输入": "请输入",
+      "请输入{account}": "请输入{account}",
+      "请输入公司品牌名": "请输入公司品牌名",
+      "请输入密码": "请输入密码",
+      "请输入您的姓名": "请输入您的姓名",
+      "请输入所在公司": "请输入所在公司",
+      "请输入手机号": "请输入手机号",
+      "请输入手机号码": "请输入手机号码",
+      "请输入标签, 回车确认": "请输入标签, 回车确认",
+      "请输入标签名称并回车确认输入": "请输入标签名称并回车确认输入",
+      "请输入正确邮箱": "请输入正确邮箱",
+      "请输入联系人姓名": "请输入联系人姓名",
+      "请输入联系邮箱": "请输入联系邮箱",
+      "请输入邮箱": "请输入邮箱",
+      "请输入邮箱/手机号码": "请输入邮箱/手机号码",
+      "请输入验证码": "请输入验证码",
+      "请选择产品": "请选择产品",
+      "请选择工作岗位": "请选择工作岗位",
+      "请选择工作职责": "请选择工作职责",
+      "请选择年投流规模": "请选择年投流规模",
+      "请选择您想体验的产品": "请选择您想体验的产品",
+      "请选择标签:": "请选择标签:",
+      "请选择登录产品": "请选择登录产品",
+      "请选择行业信息": "请选择行业信息",
+      "请选择该项内容": "请选择该项内容",
+      "请阅读并同意{agreement}和{privacy}": "请阅读并同意{agreement}和{privacy}",
+      "请验证您的账号": "请验证您的账号",
+      "谷歌sdk加载失败，请检查网络并重试": "谷歌sdk加载失败，请检查网络并重试",
+      "谷歌{title}": "谷歌{title}",
+      "谷歌信息校验失败": "谷歌信息校验失败",
+      "谷歌注册": "谷歌注册",
+      "谷歌登录": "谷歌登录",
+      "谷歌登录模块加载失败，请检查网络并重试": "谷歌登录模块加载失败，请检查网络并重试",
+      "账号不存在": "账号不存在",
+      "账号不能为空": "账号不能为空",
+      "账号封禁时间：": "账号封禁时间：",
+      "账号封禁，盗版账号": "账号封禁，盗版账号",
+      "账号或密码错误": "账号或密码错误",
+      "账号手机未认证": "账号手机未认证",
+      "账号未激活": "账号未激活",
+      "账号未设置密码，请更换其他登录方式": "账号未设置密码，请更换其他登录方式",
+      "账号登录": "账号登录",
+      "账号邮箱未认证": "账号邮箱未认证",
+      "输入文字按回车新建标签": "输入文字按回车新建标签",
+      "输入需要投放推广的产品名": "输入需要投放推广的产品名",
+      "运营推广": "运营推广",
+      "还未收到验证邮件？": "还未收到验证邮件？",
+      "还没有{shortName}标签": "还没有{shortName}标签",
+      "还没有账号？": "还没有账号？",
+      "进入邮箱": "进入邮箱",
+      "违规提示": "违规提示",
+      "选择授权方式": "选择授权方式",
+      "选择谷歌账号即表示已阅读并同意{agreement}和{privacy}": "选择谷歌账号即表示已阅读并同意{agreement}和{privacy}",
+      "邀请失效倒计时：": "邀请失效倒计时：",
+      "邀请已取消，请联系企业管理员": "邀请已取消，请联系企业管理员",
+      "邀请链接已失效, 请企业成员重新发起邀请": "邀请链接已失效, 请企业成员重新发起邀请",
+      "邀请链接已失效，如需加入企业请联系管理员": "邀请链接已失效，如需加入企业请联系管理员",
+      "邮件发送限制": "邮件发送限制",
+      "邮件可能被邮箱过滤，请到广告邮件、垃圾邮件或者相关的邮件归档中查看。": "邮件可能被邮箱过滤，请到广告邮件、垃圾邮件或者相关的邮件归档中查看。",
+      "邮箱": "邮箱",
+      "邮箱地址不能为空": "邮箱地址不能为空",
+      "邮箱注册": "邮箱注册",
+      "邮箱登录": "邮箱登录",
+      "邮箱重置": "邮箱重置",
+      "部分保存失败": "部分保存失败",
+      "采集到灵感库": "采集到灵感库",
+      "采集至我的灵感库": "采集至我的灵感库",
+      "重新生成": "重新生成",
+      "重新获取": "重新获取",
+      "重置密码": "重置密码",
+      "重置密码验证token错误": "重置密码验证token错误",
+      "金融": "金融",
+      "针对上述侵权行为，我司已完成全面取证，将保留追究上述非法行为的民事和刑事责任之权利！": "针对上述侵权行为，我司已完成全面取证，将保留追究上述非法行为的民事和刑事责任之权利！",
+      "钉钉授权失败： \\n' {message}": "钉钉授权失败： \\n' {message}",
+      "销售拓展": "销售拓展",
+      "错误码": "错误码",
+      "阿里云滑块验证加载失败，请检查网络": "阿里云滑块验证加载失败，请检查网络",
+      "附过往查处案例：": "附过往查处案例：",
+      "需要静音或开启适当大小音量播放可点击下方视频设置，系统会记住您的选择": "需要静音或开启适当大小音量播放可点击下方视频设置，系统会记住您的选择",
+      "马上注册！": "马上注册！",
+      "验签失败": "验签失败",
+      "验证不通过，请刷新页面重试": "验证不通过，请刷新页面重试",
+      "验证失败，请刷新页面重试(错误信息: {error})": "验证失败，请刷新页面重试(错误信息: {error})",
+      "验证已超时，请重新验证": "验证已超时，请重新验证",
+      "验证已过期，请重新验证": "验证已过期，请重新验证",
+      "验证成功": "",
+      "验证码": "验证码",
+      "验证码登录": "验证码登录",
+      "验证码错误": "验证码错误",
+      "验证码错误，请核对后重新填写": "验证码错误，请核对后重新填写",
+      "验证通过!": "",
+      "（${analysisResult.length} 条仿写文案）": "（${analysisResult.length} 条仿写文案）"
+    }
+  },
+  {
+    "url": "https://api.youcloud.com/leaflet",
+    "data": {
+      "data": {
+        "leafletInfoV2": []
+      }
+    }
+  },
+  {
+    "url": "https://api.youcloud.com/leaflet",
+    "data": {
+      "data": {
+        "leafletInfoV2": []
+      }
+    }
+  },
+  {
+    "url": "https://api.youcloud.com/leaflet",
+    "data": {
+      "data": {
+        "noticeList": [
+          {
+            "title": "AG投放大盘洞察上线弹窗",
+            "start_time": "2023-02-08",
+            "end_time": "2023-02-15",
+            "type": "popup",
+            "version": "v1.0.4",
+            "content": "",
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "https://appgrowing-cn.youcloud.com/leaflet/advertiser",
+                "width": 1340,
+                "height": 800,
+                "mime": "image/jpeg",
+                "url": "https://static-youcloud.umcdn.cn/caas/AG_670x400_9f32da1b49.jpg"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "15"
+              },
+              {
+                "id": "37"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": false,
+            "default_user": false,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "短剧推广排行上线",
+            "start_time": "2023-08-20",
+            "end_time": "2023-08-27",
+            "type": "new_feature",
+            "version": "1.0.3",
+            "content": "短剧功能版块重磅升级，新增短剧推广排行！\n- 把握优质短剧推广趋势\n- 探索潜力投流短剧",
+            "link": "https://appgrowing-cn.youcloud.com/playlet/brand",
+            "steps": [],
+            "popup_media": [],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "17"
+              },
+              {
+                "id": "37"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": false,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "AG线上直播活动",
+            "start_time": "2024-03-12",
+            "end_time": "2024-03-14",
+            "type": "popup",
+            "version": "0.1.1",
+            "content": null,
+            "link": "https://mp.weixin.qq.com/s/J9Ge4MSSFhI4EHw-unswZA",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/jpeg",
+                "url": "https://static-youcloud.umcdn.cn/caas/_cfd75f1e84.jpg"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": "",
+            "control_key": []
+          },
+          {
+            "title": "AG-引流到GF",
+            "start_time": "2024-12-10",
+            "end_time": "2024-12-13",
+            "type": "popup",
+            "version": "0.1.3",
+            "content": null,
+            "link": "https://goodsfox.youcloud.com/material?utm_source=ag",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/1328x800_a3afc774b0.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": false,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "1.24-2.4AG新春活动",
+            "start_time": "2025-01-24",
+            "end_time": "2025-02-04",
+            "type": "popup",
+            "version": "0.1.3",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/jpeg",
+                "url": "https://static-youcloud.umcdn.cn/caas/1328x800_72be363103.jpg"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "36"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "6.5-6.8AG-创意管家弹窗",
+            "start_time": "2025-06-05",
+            "end_time": "2025-06-08",
+            "type": "popup",
+            "version": "0.1.4",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/AG_1_11870cc032.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "7.8-7.12AG8周年弹窗",
+            "start_time": "2025-07-08",
+            "end_time": "2025-07-12",
+            "type": "popup",
+            "version": "0.1.5",
+            "content": null,
+            "link": "https://mp.weixin.qq.com/s/rtvRaoqH-0m2k3qK-zEQ3w",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/jpeg",
+                "url": "https://static-youcloud.umcdn.cn/caas/1328x800_c89815af65.jpg"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "7.25-7.27AG-创意管家弹窗",
+            "start_time": "2025-07-25",
+            "end_time": "2025-07-27",
+            "type": "popup",
+            "version": "0.1.5",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLP_Kdhv_A_Or_6_EXN_Ay_DNBT_Cwid_Fe6_Wq_V_Aw_IYXH_Tgn37_AA_1328_800_104e642a25.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "7.31-8.1AG-创意管家弹窗",
+            "start_time": "2025-07-31",
+            "end_time": "2025-08-01",
+            "type": "popup",
+            "version": "0.1.6",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 720,
+                "height": 434,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/iw_Ec_Aq_Nwbmc_DAQTRBTAF_0_Q_Mg_Br_B_Vn_Z_Qu_LA_0_Kbwho_OX_Rz_On_UAB_9_MAAAAB_Fh6_D_Ywg_A_Ca_Jpb_Qo_AC_9_IA_Czbe_png_720x720q90_9022e8c4dc.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "8.7-8.9AG-创意管家弹窗",
+            "start_time": "2025-08-07",
+            "end_time": "2025-08-09",
+            "type": "popup",
+            "version": "0.1.6",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/d6295ae90538e15ad9ab53efb114e6ac_d3d4617640.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "8.14-8.15AG-创意管家弹窗",
+            "start_time": "2025-08-14",
+            "end_time": "2025-08-15",
+            "type": "popup",
+            "version": "0.1.7",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/gif",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QHPKGO_Inulg_Ou3_N_Ay_DNBT_Cw_Mxb_Gtw_AHB_Sc_Ielp_Sd_B_AA_1328_800_ae018b4a92.gif"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "8.25-8.27AG-创意管家弹窗",
+            "start_time": "2025-08-25",
+            "end_time": "2025-08-27",
+            "type": "popup",
+            "version": "0.1.8",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLP_Jwxyt5my_CJHN_Ay_DNBT_Cw_Va_U7_H5n_P_Iok_Ii_V9o_h_EJAA_1328_800_75502e0e71.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "9.2-9.4AG-创意管家弹窗",
+            "start_time": "2025-09-02",
+            "end_time": "2025-09-04",
+            "type": "popup",
+            "version": "0.1.9",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLP_Jxn_PU_85_Tnnn_N_Ay_DNBT_Cwja9r_UH_Cl_Ek0_Ik6_W_Fc_LYHAA_1328_800_e4745ed024.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "9.9-9.11AG-创意管家弹窗",
+            "start_time": "2025-09-09",
+            "end_time": "2025-09-11",
+            "type": "popup",
+            "version": "0.1.91",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLP_Jy_GE_7lt1_03_N_Ay_DNBT_Cw44m6lp_H5_PL_4_In_KP_Zuk_ODAA_1328_800_f07b67cb04.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "9.18-9.19AG-创意管家弹窗",
+            "start_time": "2025-09-18",
+            "end_time": "2025-09-19",
+            "type": "popup",
+            "version": "0.1.92",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/gif",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QHPKGO_Inulg_Ou3_N_Ay_DNBT_Cw_Mxb_Gtw_AHB_Sc_Ielp_Sd_B_AA_1328_800_a0d76d55d0.gif"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "AG小游戏趋势榜",
+            "start_time": "2025-09-23",
+            "end_time": "2025-10-20",
+            "type": "popup",
+            "version": "1.0",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/trend/applet",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/jpeg",
+                "url": "https://static-youcloud.umcdn.cn/caas/7ac99810fd5e185660fdd45aae276fcf_32124432f7.jpg"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "9.24-9.25AG-创意管家弹窗+9.28-9.29",
+            "start_time": "2025-09-28",
+            "end_time": "2025-09-29",
+            "type": "popup",
+            "version": "0.1.93",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLPKI_Xk_W_Cnk_Srn_N_Ay_DNBT_Cw_v_Nztd_pa_Mw_Irw3ajp_R4_AA_1328_800_d4d4ffa6fb.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "11.21-11.23创意管家弹窗",
+            "start_time": "2025-11-21",
+            "end_time": "2025-11-23",
+            "type": "popup",
+            "version": "0.1.95",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLPKH_8_J7d1t5u_N_Ay_DNBT_Cw_Xi_Q4og1f9u_UI_3_Xsd1f_Sn_AA_1328_800_d3afc6b110.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "10.30-11.05 AI画面解析功能上线",
+            "start_time": "2025-10-30",
+            "end_time": "2025-11-05",
+            "type": "popup",
+            "version": "1.1",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/ai-script?id=Q-3ycGJUY7ocoitepDhDrw%3D%3D?utm_source=popup",
+            "steps": [
+              {
+                "title": null,
+                "content": null,
+                "sub_content": null,
+                "link": null,
+                "media": []
+              }
+            ],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/d1a2e4baa0b6946b6f46d9e2a5c176c5_3953414ab7.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "11.7-11.13 AI画面批量解析-素材卡片指引",
+            "start_time": "2025-11-07",
+            "end_time": "2025-11-13",
+            "type": "popup",
+            "version": "1.2",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/leaflet/list?utm_source=popup-ai-script-v2",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/2_c7cdf0dc64.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "11.14-11.20 微信扫一扫直接跳转小游戏",
+            "start_time": "2025-11-14",
+            "end_time": "2025-11-20",
+            "type": "popup",
+            "version": "1.3",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/applet/promote?utm_source=popup-scan-code",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1920,
+                "height": 1080,
+                "mime": "image/gif",
+                "url": "https://static-youcloud.umcdn.cn/caas/3_ed668900c6.gif"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "12.4-12.11游戏预约榜",
+            "start_time": "2025-12-04",
+            "end_time": "2025-12-11",
+            "type": "popup",
+            "version": "1.5",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/games/reservation?utm_source=reservation",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/_9e02a35e49.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "12.12-12.19游戏下载热度",
+            "start_time": "2025-12-12",
+            "end_time": "2025-12-19",
+            "type": "popup",
+            "version": "1.6",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/games/promote?utm_source=download",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/2_176718fa65.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "12.26-1.2 信息架构调整通知",
+            "start_time": "2025-12-26",
+            "end_time": "2026-01-02",
+            "type": "popup",
+            "version": "1.7",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/dashboard",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1000,
+                "height": 602,
+                "mime": "image/gif",
+                "url": "https://static-youcloud.umcdn.cn/caas/3_1_ecb66b85ee.gif"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "1.4-1.11 AI策略分析",
+            "start_time": "2026-01-04",
+            "end_time": "2026-01-11",
+            "type": "popup",
+            "version": "1.8",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/ai-chat?utm_source=strategy",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/AI_a3f6ef6d4c.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "AG素材标签1.20-1.27",
+            "start_time": "2026-01-20",
+            "end_time": "2026-01-27",
+            "type": "popup",
+            "version": "1.9",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/leaflet/list?utm_source=label",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/2_736eb0ae16.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "AG-AI搜画面",
+            "start_time": "2026-03-12",
+            "end_time": "2026-03-19",
+            "type": "popup",
+            "version": "1.0",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/leaflet/list?query=%E5%AE%9D%E7%AE%B1&viewType=material&isNew=0&resolution=0&isExact=false&order=-_score&startDate=2026-02-11&endDate=2026-03-12&page=1&outerPurpose=1&isStrict=true&isSearchAiScene=1&utm_source=ai-search",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 2400,
+                "height": 1430,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/A7_C59_DD_1_7_C5_B_4_E8_A_B4_B9_9_F22_F35_FAF_36_821150ecef.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              },
+              {
+                "id": "115"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://api.youcloud.com/leaflet",
+    "data": {
+      "data": {
+        "noticeList": [
+          {
+            "title": "AG投放大盘洞察上线弹窗",
+            "start_time": "2023-02-08",
+            "end_time": "2023-02-15",
+            "type": "popup",
+            "version": "v1.0.4",
+            "content": "",
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "https://appgrowing-cn.youcloud.com/leaflet/advertiser",
+                "width": 1340,
+                "height": 800,
+                "mime": "image/jpeg",
+                "url": "https://static-youcloud.umcdn.cn/caas/AG_670x400_9f32da1b49.jpg"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "15"
+              },
+              {
+                "id": "37"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": false,
+            "default_user": false,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "短剧推广排行上线",
+            "start_time": "2023-08-20",
+            "end_time": "2023-08-27",
+            "type": "new_feature",
+            "version": "1.0.3",
+            "content": "短剧功能版块重磅升级，新增短剧推广排行！\n- 把握优质短剧推广趋势\n- 探索潜力投流短剧",
+            "link": "https://appgrowing-cn.youcloud.com/playlet/brand",
+            "steps": [],
+            "popup_media": [],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "17"
+              },
+              {
+                "id": "37"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": false,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "AG线上直播活动",
+            "start_time": "2024-03-12",
+            "end_time": "2024-03-14",
+            "type": "popup",
+            "version": "0.1.1",
+            "content": null,
+            "link": "https://mp.weixin.qq.com/s/J9Ge4MSSFhI4EHw-unswZA",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/jpeg",
+                "url": "https://static-youcloud.umcdn.cn/caas/_cfd75f1e84.jpg"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": "",
+            "control_key": []
+          },
+          {
+            "title": "AG-引流到GF",
+            "start_time": "2024-12-10",
+            "end_time": "2024-12-13",
+            "type": "popup",
+            "version": "0.1.3",
+            "content": null,
+            "link": "https://goodsfox.youcloud.com/material?utm_source=ag",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/1328x800_a3afc774b0.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": false,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "1.24-2.4AG新春活动",
+            "start_time": "2025-01-24",
+            "end_time": "2025-02-04",
+            "type": "popup",
+            "version": "0.1.3",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/jpeg",
+                "url": "https://static-youcloud.umcdn.cn/caas/1328x800_72be363103.jpg"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "36"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "6.5-6.8AG-创意管家弹窗",
+            "start_time": "2025-06-05",
+            "end_time": "2025-06-08",
+            "type": "popup",
+            "version": "0.1.4",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/AG_1_11870cc032.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "7.8-7.12AG8周年弹窗",
+            "start_time": "2025-07-08",
+            "end_time": "2025-07-12",
+            "type": "popup",
+            "version": "0.1.5",
+            "content": null,
+            "link": "https://mp.weixin.qq.com/s/rtvRaoqH-0m2k3qK-zEQ3w",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/jpeg",
+                "url": "https://static-youcloud.umcdn.cn/caas/1328x800_c89815af65.jpg"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "7.25-7.27AG-创意管家弹窗",
+            "start_time": "2025-07-25",
+            "end_time": "2025-07-27",
+            "type": "popup",
+            "version": "0.1.5",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLP_Kdhv_A_Or_6_EXN_Ay_DNBT_Cwid_Fe6_Wq_V_Aw_IYXH_Tgn37_AA_1328_800_104e642a25.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "7.31-8.1AG-创意管家弹窗",
+            "start_time": "2025-07-31",
+            "end_time": "2025-08-01",
+            "type": "popup",
+            "version": "0.1.6",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 720,
+                "height": 434,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/iw_Ec_Aq_Nwbmc_DAQTRBTAF_0_Q_Mg_Br_B_Vn_Z_Qu_LA_0_Kbwho_OX_Rz_On_UAB_9_MAAAAB_Fh6_D_Ywg_A_Ca_Jpb_Qo_AC_9_IA_Czbe_png_720x720q90_9022e8c4dc.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "8.7-8.9AG-创意管家弹窗",
+            "start_time": "2025-08-07",
+            "end_time": "2025-08-09",
+            "type": "popup",
+            "version": "0.1.6",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/d6295ae90538e15ad9ab53efb114e6ac_d3d4617640.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "8.14-8.15AG-创意管家弹窗",
+            "start_time": "2025-08-14",
+            "end_time": "2025-08-15",
+            "type": "popup",
+            "version": "0.1.7",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/gif",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QHPKGO_Inulg_Ou3_N_Ay_DNBT_Cw_Mxb_Gtw_AHB_Sc_Ielp_Sd_B_AA_1328_800_ae018b4a92.gif"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "8.25-8.27AG-创意管家弹窗",
+            "start_time": "2025-08-25",
+            "end_time": "2025-08-27",
+            "type": "popup",
+            "version": "0.1.8",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLP_Jwxyt5my_CJHN_Ay_DNBT_Cw_Va_U7_H5n_P_Iok_Ii_V9o_h_EJAA_1328_800_75502e0e71.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "9.2-9.4AG-创意管家弹窗",
+            "start_time": "2025-09-02",
+            "end_time": "2025-09-04",
+            "type": "popup",
+            "version": "0.1.9",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLP_Jxn_PU_85_Tnnn_N_Ay_DNBT_Cwja9r_UH_Cl_Ek0_Ik6_W_Fc_LYHAA_1328_800_e4745ed024.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "9.9-9.11AG-创意管家弹窗",
+            "start_time": "2025-09-09",
+            "end_time": "2025-09-11",
+            "type": "popup",
+            "version": "0.1.91",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLP_Jy_GE_7lt1_03_N_Ay_DNBT_Cw44m6lp_H5_PL_4_In_KP_Zuk_ODAA_1328_800_f07b67cb04.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "9.18-9.19AG-创意管家弹窗",
+            "start_time": "2025-09-18",
+            "end_time": "2025-09-19",
+            "type": "popup",
+            "version": "0.1.92",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/gif",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QHPKGO_Inulg_Ou3_N_Ay_DNBT_Cw_Mxb_Gtw_AHB_Sc_Ielp_Sd_B_AA_1328_800_a0d76d55d0.gif"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "AG小游戏趋势榜",
+            "start_time": "2025-09-23",
+            "end_time": "2025-10-20",
+            "type": "popup",
+            "version": "1.0",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/trend/applet",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/jpeg",
+                "url": "https://static-youcloud.umcdn.cn/caas/7ac99810fd5e185660fdd45aae276fcf_32124432f7.jpg"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "9.24-9.25AG-创意管家弹窗+9.28-9.29",
+            "start_time": "2025-09-28",
+            "end_time": "2025-09-29",
+            "type": "popup",
+            "version": "0.1.93",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLPKI_Xk_W_Cnk_Srn_N_Ay_DNBT_Cw_v_Nztd_pa_Mw_Irw3ajp_R4_AA_1328_800_d4d4ffa6fb.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "11.21-11.23创意管家弹窗",
+            "start_time": "2025-11-21",
+            "end_time": "2025-11-23",
+            "type": "popup",
+            "version": "0.1.95",
+            "content": null,
+            "link": null,
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/l_QLPKH_8_J7d1t5u_N_Ay_DNBT_Cw_Xi_Q4og1f9u_UI_3_Xsd1f_Sn_AA_1328_800_d3afc6b110.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "10.30-11.05 AI画面解析功能上线",
+            "start_time": "2025-10-30",
+            "end_time": "2025-11-05",
+            "type": "popup",
+            "version": "1.1",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/ai-script?id=Q-3ycGJUY7ocoitepDhDrw%3D%3D?utm_source=popup",
+            "steps": [
+              {
+                "title": null,
+                "content": null,
+                "sub_content": null,
+                "link": null,
+                "media": []
+              }
+            ],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/d1a2e4baa0b6946b6f46d9e2a5c176c5_3953414ab7.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "11.7-11.13 AI画面批量解析-素材卡片指引",
+            "start_time": "2025-11-07",
+            "end_time": "2025-11-13",
+            "type": "popup",
+            "version": "1.2",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/leaflet/list?utm_source=popup-ai-script-v2",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/2_c7cdf0dc64.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "11.14-11.20 微信扫一扫直接跳转小游戏",
+            "start_time": "2025-11-14",
+            "end_time": "2025-11-20",
+            "type": "popup",
+            "version": "1.3",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/applet/promote?utm_source=popup-scan-code",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1920,
+                "height": 1080,
+                "mime": "image/gif",
+                "url": "https://static-youcloud.umcdn.cn/caas/3_ed668900c6.gif"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "12.4-12.11游戏预约榜",
+            "start_time": "2025-12-04",
+            "end_time": "2025-12-11",
+            "type": "popup",
+            "version": "1.5",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/games/reservation?utm_source=reservation",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/_9e02a35e49.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "12.12-12.19游戏下载热度",
+            "start_time": "2025-12-12",
+            "end_time": "2025-12-19",
+            "type": "popup",
+            "version": "1.6",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/games/promote?utm_source=download",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/2_176718fa65.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "12.26-1.2 信息架构调整通知",
+            "start_time": "2025-12-26",
+            "end_time": "2026-01-02",
+            "type": "popup",
+            "version": "1.7",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/dashboard",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1000,
+                "height": 602,
+                "mime": "image/gif",
+                "url": "https://static-youcloud.umcdn.cn/caas/3_1_ecb66b85ee.gif"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "1.4-1.11 AI策略分析",
+            "start_time": "2026-01-04",
+            "end_time": "2026-01-11",
+            "type": "popup",
+            "version": "1.8",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/ai-chat?utm_source=strategy",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/AI_a3f6ef6d4c.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "AG素材标签1.20-1.27",
+            "start_time": "2026-01-20",
+            "end_time": "2026-01-27",
+            "type": "popup",
+            "version": "1.9",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/leaflet/list?utm_source=label",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 1328,
+                "height": 800,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/2_736eb0ae16.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "36"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          },
+          {
+            "title": "AG-AI搜画面",
+            "start_time": "2026-03-12",
+            "end_time": "2026-03-19",
+            "type": "popup",
+            "version": "1.0",
+            "content": null,
+            "link": "https://appgrowing-cn.youcloud.com/leaflet/list?query=%E5%AE%9D%E7%AE%B1&viewType=material&isNew=0&resolution=0&isExact=false&order=-_score&startDate=2026-02-11&endDate=2026-03-12&page=1&outerPurpose=1&isStrict=true&isSearchAiScene=1&utm_source=ai-search",
+            "steps": [],
+            "popup_media": [
+              {
+                "alternativeText": "",
+                "width": 2400,
+                "height": 1430,
+                "mime": "image/png",
+                "url": "https://static-youcloud.umcdn.cn/caas/A7_C59_DD_1_7_C5_B_4_E8_A_B4_B9_9_F22_F35_FAF_36_821150ecef.png"
+              }
+            ],
+            "purchase_plans": [
+              {
+                "id": "14"
+              },
+              {
+                "id": "15"
+              },
+              {
+                "id": "37"
+              },
+              {
+                "id": "84"
+              },
+              {
+                "id": "115"
+              }
+            ],
+            "brand": {
+              "id": "6",
+              "name": "AppGrowing"
+            },
+            "ad_position": null,
+            "tourist_user": true,
+            "default_user": true,
+            "guide_key": null,
+            "control_key": []
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://posthog.youcloud.com/e/?ip=1&_=1773896503416&ver=1.101.0",
+    "data": {
+      "status": 1
+    }
+  },
+  {
+    "url": "https://posthog.youcloud.com/decide/?v=3&ip=1&_=1773896503416&ver=1.101.0",
+    "data": {
+      "config": {
+        "enable_collect_everything": true
+      },
+      "toolbarParams": {},
+      "isAuthenticated": false,
+      "supportedCompression": [
+        "gzip",
+        "gzip-js"
+      ],
+      "featureFlags": {
+        "testtest": false,
+        "survey-targeting-appgrowing-global-survey-test": false,
+        "survey-targeting-jssdk2-nps": false,
+        "v5_6_0-kuaixp-data": false
+      },
+      "sessionRecording": false,
+      "errorsWhileComputingFlags": false,
+      "featureFlagPayloads": {},
+      "capturePerformance": false,
+      "autocapture_opt_out": false,
+      "autocaptureExceptions": false,
+      "surveys": true,
+      "siteApps": []
+    }
+  },
+  {
+    "url": "https://a.gdt.qq.com/config?user_action_set_id=1202386026&url=https%3A%2F%2Fauth.youcloud.com%2FregisterIframe%3Fapp_id%3Dappgrowing%26language%3Dzh%26isRedirect%3Dtrue&code_type=1",
+    "data": {
+      "code": 0,
+      "message": "ok",
+      "data": []
+    }
+  },
+  {
+    "url": "https://dp3.qq.com/stdlog",
+    "data": {
+      "ret": 0,
+      "msg": "success"
+    }
+  },
+  {
+    "url": "https://ipaddr.market.alicloudapi.com/ip_addr_search/v1?IP_ADDR=${ip}",
+    "data": {
+      "INPUT_STRING": "${ip}",
+      "INPUT_IP_ADDRESS": "",
+      "CALLER_IP_ADDRESS": "23.172.200.72",
+      "STATUS": "很抱歉，您输入的数据中未包含任何IPV4地址信息，请效验后重新输入",
+      "ENTITY": {
+        "INPUT_IP_ADDRESS": {
+          "IP_ADDRESS": "",
+          "GLOBAL": "",
+          "NATION": "",
+          "NATION_NAME_EN": "",
+          "NATION_NAME_EN_ABBR": "",
+          "PROVINCE": "",
+          "CITY": "",
+          "DISTRICT": "",
+          "ISP": "",
+          "ADCODE": "",
+          "GPS": "",
+          "STATUS": "很抱歉，您输入的数据中未包含任何IPV4地址信息，请效验后重新输入"
+        },
+        "CALLER_IP_ADDRESS": {
+          "IP_ADDRESS": "23.172.200.72",
+          "GLOBAL": "北美洲",
+          "NATION": "美国",
+          "NATION_NAME_EN": "UNITED STATES",
+          "NATION_NAME_EN_ABBR": "US",
+          "PROVINCE": "",
+          "CITY": "",
+          "DISTRICT": "",
+          "ISP": "Radish",
+          "ADCODE": "",
+          "GPS": "-95.713,37.090",
+          "STATUS": "艾科瑞特，让企业业绩长青"
+        }
+      }
+    }
+  },
+  {
+    "url": "https://new-api.meiqia.com/hikari/visit/visit/get_base_config?ent_id=f70fe1324abcb64863a03c82c64ea96e",
+    "data": {
+      "domain_security_config": {
+        "enabled": true,
+        "status": "close",
+        "urls": []
+      },
+      "no_message_visitor_guides": {
+        "guides": [],
+        "status": "close"
+      },
+      "widget_settings": {
+        "desktop": {
+          "btn": {
+            "icon": {
+              "offline": 7,
+              "online": 7
+            },
+            "picture": {
+              "offline": "",
+              "online": ""
+            },
+            "position": {
+              "bottom": 0,
+              "horizontal": 60,
+              "type": "right"
+            },
+            "preview": "close",
+            "text": {
+              "offline": "当前离线，给我们留言吧",
+              "online": "我们在线，来聊聊吧"
+            },
+            "theme": "ff5000",
+            "type": "bottom"
+          },
+          "panel": {
+            "customer_content": "",
+            "position": {
+              "bottom": 0,
+              "horizontal": 140,
+              "type": "right",
+              "width": "330"
+            },
+            "questionEnable": false,
+            "questionLayout": "collapse",
+            "questionList": [],
+            "questions": [],
+            "theme": [
+              "00e6a0",
+              "1f1f21",
+              "ffffff"
+            ],
+            "type": "fiesta"
+          },
+          "pop": false
+        },
+        "https": "close",
+        "keepChatWindow": "open",
+        "mobile": {
+          "btn": {
+            "icon": {
+              "offline": 1,
+              "online": 1
+            },
+            "picture": {
+              "offline": "",
+              "online": ""
+            },
+            "position": {
+              "bottom": 0,
+              "horizontal": 0,
+              "type": "left"
+            },
+            "preview": "open",
+            "text": {
+              "offline": "下班了，给我们留言吧",
+              "online": "我们在线，来聊聊吧"
+            },
+            "theme": "ff5000",
+            "type": "round"
+          },
+          "panel": {
+            "position": {
+              "bottom": 0,
+              "horizontal": 0,
+              "type": ""
+            },
+            "questionEnable": false,
+            "questionList": [],
+            "questions": [],
+            "theme": [
+              "ff5000",
+              "white"
+            ],
+            "type": "fiesta",
+            "windowSize": "100%"
+          },
+          "pop": false
+        },
+        "removeBrand": "open",
+        "ring": "close",
+        "switchLanguage": "close",
+        "ticketOnly": "close"
+      }
+    }
+  },
+  {
+    "url": "https://api-auth.youcloud.com/graphql",
+    "data": {
+      "data": {
+        "loginInfo": {
+          "user": null,
+          "defaultBrandLink": "https://appgrowing-cn.youcloud.com",
+          "is_overseas": true,
+          "yc_token": "29XouaPd-emDUZms6yd901dZk3Ee15nC6hJcQ2wpg-MhlcE21jyd7qPwn-69QMEXyxJQ7YT-4uRSF8jwL-6svEIaBgkngiCjv2dfg5etiMMlVXmDwF2Gjs5Q-S2SJTH0u1VXJDiRZEwWarS9JN2VLpWCUqxjhbzgOMsa3RemPc7oeTZc2Arlrxe4FMOiEhl0"
+        }
+      }
+    }
+  },
+  {
+    "url": "https://dp3.qq.com/stdlog",
+    "data": {
+      "ret": 0,
+      "msg": "success"
+    }
+  },
+  {
+    "url": "https://api-auth.youcloud.com/graphql",
+    "data": {
+      "data": {
+        "registerIframeForm": {
+          "register_iframe_title": "注册",
+          "register_iframe_button_text": "免费试用",
+          "forms": {
+            "mobile": {
+              "label": "手机注册",
+              "value": "mobile",
+              "form": [
+                {
+                  "component": "input",
+                  "key": "mobile",
+                  "props": {
+                    "placeholder": "请输入手机号码",
+                    "autocomplete": "on"
+                  },
+                  "required": true
+                },
+                {
+                  "component": "input",
+                  "key": "code",
+                  "props": {
+                    "required": true,
+                    "placeholder": "请输入验证码"
+                  },
+                  "related": [
+                    "mobile"
+                  ]
+                },
+                {
+                  "key": "standard_industry",
+                  "component": "select",
+                  "required": true,
+                  "extend": true,
+                  "props": {
+                    "placeholder": "选择行业，为你呈现专属数据",
+                    "data": [
+                      {
+                        "label": "游戏",
+                        "value": "games"
+                      },
+                      {
+                        "label": "广告代理",
+                        "value": "advertising_agency"
+                      },
+                      {
+                        "label": "媒体平台",
+                        "value": "media_platform"
+                      },
+                      {
+                        "label": "阅读",
+                        "value": "reading"
+                      },
+                      {
+                        "label": "短剧",
+                        "value": "short_drama"
+                      },
+                      {
+                        "label": "AI工具",
+                        "value": "ai_tools"
+                      },
+                      {
+                        "label": "医疗健康",
+                        "value": "healthcare"
+                      },
+                      {
+                        "label": "社交婚恋",
+                        "value": "social_dating"
+                      },
+                      {
+                        "label": "文化娱乐",
+                        "value": "culture_entertainment"
+                      },
+                      {
+                        "label": "工具应用",
+                        "value": "utility_applications"
+                      },
+                      {
+                        "label": "网赚应用",
+                        "value": "money_making_apps"
+                      },
+                      {
+                        "label": "教育培训",
+                        "value": "education_training"
+                      },
+                      {
+                        "label": "金融",
+                        "value": "finance"
+                      },
+                      {
+                        "label": "电商",
+                        "value": "e_commerce"
+                      },
+                      {
+                        "label": "生活服务",
+                        "value": "lifestyle_services"
+                      },
+                      {
+                        "label": "招商加盟",
+                        "value": "business_investment_franchising"
+                      },
+                      {
+                        "label": "其他",
+                        "value": "other"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "area_code": [
+            {
+              "name": "中国大陆",
+              "assignCode": "86",
+              "icon": "https://static-youcloud.umcdn.cn/caas/CN_a44ae34a7f.png"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "url": "https://new-api.meiqia.com/hikari/visit/visit/start?ent_id=f70fe1324abcb64863a03c82c64ea96e&track_id=380GSNpa5WyKn9lZeNobMYh0JvX&title=%E5%B9%BF%E5%91%8A%E7%B4%A0%E6%9D%90%E6%90%9C%E7%B4%A2+-+AppGrowing+-+%E6%9C%89%E7%B1%B3%E4%BA%91&referrer_url=&url=https:%2F%2Fappgrowing-cn.youcloud.com%2Fbrand%2FQ4tst59gXZJKmkpU1KB8mw%3D%3D%2Fleaflet%2Flist%3FviewType%3Dleaflet%26isNew%3D0%26resolution%3D0%26isExact%3Dfalse%26order%3Dimpression_desc%26startDate%3D2026-03-12%26endDate%3D2026-03-18%26page%3D1%26brandType%3D401%26genre%3D1%26isStrict%3Dtrue%26isSearchAiScene%3D0&is_standalone=false",
+    "data": {
+      "success": true,
+      "black": false,
+      "_agent_servability": false,
+      "servability": true,
+      "in_queue": false,
+      "in_conv": false,
+      "visitor_status": 0,
+      "ent_id": 374382,
+      "risk_status": "white",
+      "browser_id": "1381c543cba9381dcb6cfda78bcb801d",
+      "visit_page_id": "1381c543cba9381dcb6cfda78bcb801d",
+      "track_id": "380GSNpa5WyKn9lZeNobMYh0JvX",
+      "visit_id": "3B9JzpsQytNv5EIZGce6Ka594tt",
+      "visitor_status_agent_token": null,
+      "search_engine": "",
+      "browser_family": "HeadlessChrome",
+      "baidu_bid_black_list": [],
+      "visitor_info": {
+        "landing_url": "",
+        "source_url": "",
+        "keyword": "",
+        "clue": false,
+        "is_repeated_visitor": false,
+        "visit_cnt": 28
+      },
+      "mpush_settings": [
+        {
+          "id": "9d1784d4-b628-aca8-37bf-4720c5ab0f52",
+          "index": 0,
+          "push_time": "all",
+          "push_begin_time": "",
+          "push_end_time": "",
+          "push_visitor_type": 3,
+          "work_rule": 1,
+          "visitor_rules": [
+            {
+              "name": "visiting",
+              "val": "https://youshu.youcloud.com/",
+              "op": 1
+            },
+            {
+              "name": "returning",
+              "val": "0",
+              "op": 1
+            }
+          ],
+          "status": 1,
+          "target": "mobile",
+          "auto_status": "open",
+          "manual_status": "close"
+        },
+        {
+          "id": "5cdbc398-207e-38ca-4180-52a9e6fc43cf",
+          "index": 0,
+          "push_time": "all",
+          "push_begin_time": "",
+          "push_end_time": "",
+          "push_visitor_type": 3,
+          "work_rule": 1,
+          "visitor_rules": [
+            {
+              "name": "visiting",
+              "val": "https://appgrowing.cn/page/pricing",
+              "op": 1
+            }
+          ],
+          "status": 1,
+          "target": "pc",
+          "auto_status": "open",
+          "manual_status": "close"
+        },
+        {
+          "id": "317feb5a-a2c5-f48a-2fcd-7fd84157bd88",
+          "index": 0,
+          "push_time": "all",
+          "push_begin_time": "",
+          "push_end_time": "",
+          "push_visitor_type": 3,
+          "work_rule": 2,
+          "visitor_rules": [
+            {
+              "name": "visiting",
+              "val": "https://appgrowing-global.youcloud.com/",
+              "op": 1
+            },
+            {
+              "name": "returning",
+              "val": "0",
+              "op": 1
+            },
+            {
+              "name": "visiting",
+              "val": "https://goodsfox.com/",
+              "op": 1
+            },
+            {
+              "name": "returning",
+              "val": "0",
+              "op": 1
+            }
+          ],
+          "status": 1,
+          "target": "mobile",
+          "auto_status": "open",
+          "manual_status": "close"
+        },
+        {
+          "id": "b093d9ea-3e63-5e0f-bebf-60eb8317def9",
+          "index": 0,
+          "push_time": "all",
+          "push_begin_time": "",
+          "push_end_time": "",
+          "push_visitor_type": 3,
+          "work_rule": 1,
+          "visitor_rules": [
+            {
+              "name": "visiting",
+              "val": "https://youshu.youcloud.com/price",
+              "op": 1
+            },
+            {
+              "name": "returning",
+              "val": "0",
+              "op": 1
+            }
+          ],
+          "status": 1,
+          "target": "mobile",
+          "auto_status": "open",
+          "manual_status": "close"
+        },
+        {
+          "id": "625a0a5d-f005-949e-f265-861e8b55b7ee",
+          "index": 0,
+          "push_time": "all",
+          "push_begin_time": "",
+          "push_end_time": "",
+          "push_visitor_type": 3,
+          "work_rule": 1,
+          "visitor_rules": [
+            {
+              "name": "visiting",
+              "val": "https://youshu.youcloud.com/price",
+              "op": 1
+            }
+          ],
+          "status": 1,
+          "target": "pc",
+          "auto_status": "open",
+          "manual_status": "close"
+        },
+        {
+          "id": "ae1d6f43-04c7-6eaa-b25e-25f512278c5e",
+          "index": 0,
+          "push_time": "all",
+          "push_begin_time": "",
+          "push_end_time": "",
+          "push_visitor_type": 3,
+          "work_rule": 1,
+          "visitor_rules": [
+            {
+              "name": "visiting",
+              "val": "https://youshu.youcloud.com/",
+              "op": 1
+            },
+            {
+              "name": "returning",
+              "val": "0",
+              "op": 1
+            }
+          ],
+          "status": 1,
+          "target": "pc",
+          "auto_status": "open",
+          "manual_status": "close"
+        }
+      ],
+      "mpush_bot_id": 1903286,
+      "survey": {
+        "has_submitted_form": false,
+        "status": "close"
+      },
+      "enterprise_info": {
+        "avatar": "https://tenant-assets.meiqiausercontent.com/avatars/374382/Ea3i/ky1zaJ4rtw5JEg1aYirZ.png",
+        "fullname": "有米科技",
+        "location": "domestic",
+        "name": "",
+        "prompt_status": "close",
+        "public_cellphone": "",
+        "public_email": "",
+        "public_nickname": "有米云小助手",
+        "public_qq": "",
+        "public_signature": "",
+        "public_telephone": "400 822 8666",
+        "public_weixin": ""
+      },
+      "facade": {
+        "direct": false,
+        "keyword": "",
+        "landing_page": "https://appgrowing-cn.youcloud.com/brand/Q4tst59gXZJKmkpU1KB8mw==/leaflet/list?viewType=leaflet&isNew=0&resolution=0&isExact=false&order=impression_desc&startDate=2026-03-12&endDate=2026-03-18&page=1&brandType=401&genre=1&isStrict=true&isSearchAiScene=0",
+        "location": "",
+        "returning": true,
+        "search_engine": "",
+        "source_page": "",
+        "source_type": "web"
+      },
+      "robot_settings": {
+        "response_eval_switch": "open",
+        "robot_id": 0,
+        "show_switch": false,
+        "status": false,
+        "trusteeship": false
+      },
+      "callback": {
+        "callback": "close",
+        "callback_captcha": "open"
+      },
+      "widget_settings": {
+        "desktop": {
+          "btn": {
+            "icon": {
+              "offline": 7,
+              "online": 7
+            },
+            "picture": {
+              "offline": "",
+              "online": ""
+            },
+            "position": {
+              "bottom": 0,
+              "horizontal": 60,
+              "type": "right"
+            },
+            "preview": "close",
+            "text": {
+              "offline": "当前离线，给我们留言吧",
+              "online": "我们在线，来聊聊吧"
+            },
+            "theme": "ff5000",
+            "type": "bottom"
+          },
+          "panel": {
+            "customer_content": "",
+            "position": {
+              "bottom": 0,
+              "horizontal": 140,
+              "type": "right",
+              "width": "330"
+            },
+            "questionEnable": false,
+            "questionLayout": "collapse",
+            "questionList": [],
+            "questions": [],
+            "theme": [
+              "00e6a0",
+              "1f1f21",
+              "ffffff"
+            ],
+            "type": "fiesta"
+          },
+          "pop": false
+        },
+        "https": "close",
+        "keepChatWindow": "open",
+        "mobile": {
+          "btn": {
+            "icon": {
+              "offline": 1,
+              "online": 1
+            },
+            "picture": {
+              "offline": "",
+              "online": ""
+            },
+            "position": {
+              "bottom": 0,
+              "horizontal": 0,
+              "type": "left"
+            },
+            "preview": "open",
+            "text": {
+              "offline": "下班了，给我们留言吧",
+              "online": "我们在线，来聊聊吧"
+            },
+            "theme": "ff5000",
+            "type": "round"
+          },
+          "panel": {
+            "position": {
+              "bottom": 0,
+              "horizontal": 0,
+              "type": ""
+            },
+            "questionEnable": false,
+            "questionList": [],
+            "questions": [],
+            "theme": [
+              "ff5000",
+              "white"
+            ],
+            "type": "fiesta",
+            "windowSize": "100%"
+          },
+          "pop": false
+        },
+        "removeBrand": "open",
+        "ring": "close",
+        "switchLanguage": "close",
+        "ticketOnly": "close"
+      },
+      "standalone_window_config": {
+        "background": {
+          "color": "fff",
+          "url": ""
+        },
+        "desktop": {
+          "theme": [
+            "007aff",
+            "white"
+          ],
+          "type": "focus"
+        },
+        "mobile": {
+          "theme": [
+            "007aff",
+            "white"
+          ],
+          "type": "mustang"
+        },
+        "removeBrand": "open",
+        "ring": "close",
+        "switchLanguage": "close"
+      },
+      "queueing_settings": {
+        "intro": "抱歉，当前所有客服已经达到服务上限，请耐心等候，我们很快就来接待你，谢谢。",
+        "status": "close",
+        "ticket_intro": "如果等不及，可以选择"
+      },
+      "ent_welcome_message": "<p><span style=\"font-size:16px\">您好，欢迎关注有米有数，请问有什么能够帮到您？</span></p>",
+      "custom_message_config": {
+        "product_card": {
+          "config": {},
+          "source": "import",
+          "status": "close",
+          "style": "small"
+        }
+      },
+      "withdraw_msg_config": {
+        "expire_seconds": 120,
+        "no_notification": "open",
+        "status": "open"
+      },
+      "client_access_os_files_config": {
+        "status": "close"
+      },
+      "visitor_video_msg_config": {
+        "status": "close"
+      },
+      "visitor_photo_msg_config": {
+        "status": "open"
+      },
+      "service_evaluation_config": {
+        "agent_invitation": "close",
+        "agent_visible": "close",
+        "auto_invitation": "open",
+        "problem_feedback": "close",
+        "prompt_text": "您对本次服务满意吗？"
+      },
+      "domain_security_config": {
+        "enabled": true,
+        "status": "close",
+        "urls": []
+      },
+      "send_file_settings": {
+        "widget_status": "close"
+      },
+      "scheduler_after_client_send_msg": false,
+      "invitation_config": {
+        "auto": {
+          "accept": {
+            "countdown": 10,
+            "status": "close"
+          },
+          "countdown": 5,
+          "reject": {
+            "countdown": 10,
+            "type": "stop"
+          },
+          "status": "close"
+        },
+        "desktop": {
+          "actions": [],
+          "bgi": {
+            "height": 210,
+            "src": "",
+            "width": 420
+          },
+          "src": "",
+          "text": "您好，当前有专业客服人员在线，让我们来帮助您吧。",
+          "type": 1
+        },
+        "manual": {
+          "accept": {
+            "countdown": 10,
+            "status": "close"
+          },
+          "reject": {
+            "countdown": 10,
+            "type": "stop"
+          },
+          "status": "close"
+        },
+        "mobile": {
+          "actions": [],
+          "bgi": {
+            "height": 140,
+            "src": "",
+            "width": 280
+          },
+          "src": "",
+          "text": "您好，当前有专业客服人员在线，让我们来帮助您吧。",
+          "type": 1
+        }
+      },
+      "ticket_config": {
+        "addresser_name": "",
+        "captcha": "close",
+        "category": "close",
+        "contactRule": "multi",
+        "content_fill_type": "content",
+        "content_title": "留言",
+        "custom_fields": [
+          {
+            "metainfo": [],
+            "name": "tel",
+            "placeholder": "",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "metainfo": [],
+            "name": "name",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "metainfo": [],
+            "name": "company",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "defaultTemplate": "close",
+        "defaultTemplateContent": "",
+        "email": "close",
+        "intro": "您好，很抱歉我们暂时无法为您提供服务，如需帮助，请留言,\n我们将尽快联系并解决您的问题",
+        "name": "open",
+        "permission": "close",
+        "qq": "close",
+        "sdk_enabled": true,
+        "tel": "open",
+        "upload_image": "open",
+        "wechat": "close"
+      },
+      "hide_conversation_history_config": {
+        "status": "close"
+      },
+      "receipt": "f70fe1324abcb64863a03c82c64ea96e"
+    }
+  },
+  {
+    "url": "https://posthog.youcloud.com/api/surveys/?token=oEY7uwNI-BrLK7aN1Al8D1-abXKFEeENlm9zn5gOvzM&ip=1&_=1773896509074&ver=1.101.0",
+    "data": {
+      "surveys": [
+        {
+          "id": "019156c9-4836-0000-e29d-3baa4ec9fbf3",
+          "name": "Goodsfox工作台调研",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 5,
+              "display": "number",
+              "question": "您觉得工作台好用吗?",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "很不好用",
+              "upperBoundLabel": "很好用"
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "您认为还可以怎么提升？",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://goodsfox.youcloud.com",
+            "selector": "html[lang=zh] .ymc-nav-avatar",
+            "urlMatchType": "exact",
+            "seenSurveyWaitPeriodInDays": 30
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#eeeded",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "我们致力于为您提供更好的服务，感谢您的反馈！",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black"
+          },
+          "start_date": null,
+          "end_date": null
+        },
+        {
+          "id": "01915703-a7ab-0000-601b-4842ff456bde",
+          "name": "Goodsfox满意度调研",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 10,
+              "display": "number",
+              "question": "您愿意将 GoodsFox 推荐给朋友？",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "",
+              "upperBoundLabel": ""
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "找不到想看的品牌？",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://goodsfox.youcloud.com/",
+            "selector": "html[lang=zh] .ymc-nav-avatar",
+            "seenSurveyWaitPeriodInDays": 30
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#eeeded",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "我们致力于为您提供更好的服务，感谢您的反馈！",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black"
+          },
+          "start_date": null,
+          "end_date": null
+        },
+        {
+          "id": "01903659-621d-0000-46bb-bec1596e75e1",
+          "name": "电商商品-品牌推广排行（AG国内）",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 10,
+              "display": "number",
+              "question": "您愿意向他人推荐品牌推广排行榜吗?",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "很不满意",
+              "upperBoundLabel": "十分满意"
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "您觉得哪些方面可以做得更好？（选填）",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://appgrowing-cn.youcloud.com/leaflet/brand",
+            "selector": ".ymc-nav-avatar",
+            "seenSurveyWaitPeriodInDays": 90
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#fff",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "感谢你的反馈~",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black",
+            "thankYouMessageDescription": ""
+          },
+          "start_date": "2024-06-20T16:01:08.852000Z",
+          "end_date": null
+        },
+        {
+          "id": "01915707-5daa-0000-ad63-d83c23311a9b",
+          "name": "Goodsfox营销日历问卷",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 5,
+              "display": "number",
+              "question": "您认为营销日历好用吗？",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "很不好用",
+              "upperBoundLabel": "很好用"
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "我们可以怎样提高？",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://goodsfox.youcloud.com/saleCalendar",
+            "selector": "html[lang=zh] .ymc-nav-avatar",
+            "seenSurveyWaitPeriodInDays": 30
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#eeeded",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "我们致力于为您提供更好的服务，感谢您的反馈！",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black"
+          },
+          "start_date": null,
+          "end_date": null
+        },
+        {
+          "id": "0190366c-fe6b-0000-176b-9a8a63d81b1c",
+          "name": "线索收集-品牌推广排行（AG国内）",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 10,
+              "display": "number",
+              "question": "您愿意向他人推荐品牌推广排行榜吗?",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "很不满意",
+              "upperBoundLabel": "十分满意"
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "您觉得哪些方面可以做得更好？（选填）",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://appgrowing-cn.youcloud.com/clue/brand",
+            "selector": ".ymc-nav-avatar",
+            "seenSurveyWaitPeriodInDays": 90
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#fff",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "感谢你的反馈~",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black"
+          },
+          "start_date": "2024-06-20T16:12:40.491000Z",
+          "end_date": null
+        },
+        {
+          "id": "01903675-19b1-0000-cd2c-47e36b01f4a9",
+          "name": "AG全局问卷",
+          "description": "",
+          "type": "popover",
+          "questions": [
+            {
+              "type": "rating",
+              "scale": 10,
+              "display": "number",
+              "question": "您愿意向他人推荐AppGrowing中国版吗?",
+              "buttonText": "提交",
+              "description": "",
+              "lowerBoundLabel": "非常不愿意",
+              "upperBoundLabel": "非常愿意"
+            },
+            {
+              "type": "open",
+              "optional": true,
+              "question": "您觉得哪些功能可以做得更好？（选填）",
+              "buttonText": "提交",
+              "description": ""
+            }
+          ],
+          "conditions": {
+            "url": "https://appgrowing-cn.youcloud.com/",
+            "selector": ".ymc-nav-avatar",
+            "seenSurveyWaitPeriodInDays": 90
+          },
+          "appearance": {
+            "position": "right",
+            "whiteLabel": false,
+            "borderColor": "#c9c6c6",
+            "placeholder": "Start typing...",
+            "autoDisappear": true,
+            "backgroundColor": "#fff",
+            "ratingButtonColor": "white",
+            "submitButtonColor": "black",
+            "thankYouMessageHeader": "我们致力于为您提供更好的服务，感谢您的反馈！",
+            "displayThankYouMessage": true,
+            "ratingButtonActiveColor": "black"
+          },
+          "start_date": "2024-06-20T16:21:26.130000Z",
+          "end_date": null
+        }
+      ]
+    }
+  },
+  {
+    "url": "https://new-api.meiqia.com/hikari/customer/client/attrs_jsonp?ent_id=374382&track_id=380GSNpa5WyKn9lZeNobMYh0JvX&visit_id=3B9JzpsQytNv5EIZGce6Ka594tt&browser_id=1381c543cba9381dcb6cfda78bcb801d&attrs=%7B%7D",
+    "data": {
+      "invalid_attrs": {}
+    }
+  },
+  {
+    "url": "https://static.meiqia.com/fe-widget/v1.5.6.prod.20260306_165/lang/en.json",
+    "data": {
+      "美洽": "Meiqia",
+      "来鼓": "Laigu",
+      "点击问题或回复数字查看答案": "Click on the question or send the number to check the answer",
+      "给我们留言": "Leave us a message",
+      "分类": "Category",
+      "姓名": "Name",
+      "手机": "Mobile phone number",
+      "邮箱": "Email",
+      "微信": "WeChat",
+      "QQ": "QQ",
+      "联系人": "Contact",
+      "性别": "Gender",
+      "年龄": "Age",
+      "电话": "Phone",
+      "微博": "Weibo",
+      "地址": "Address",
+      "允许": "Allow",
+      "备注": "Remarks",
+      "留言内容": "Message",
+      "请输入": "Please enter",
+      "验证码": "Verification Code",
+      "点击更换": "Click to replace",
+      "提交": "Submit",
+      "留言成功": "Message sent",
+      "我们会尽快联系你": "We will contact you as soon as possible",
+      "关闭": "Close",
+      "再次留言": "Leave another message",
+      "发送": "Send",
+      "对方输入消息中...": "Typing…",
+      "连接中...": "Connecting...",
+      "对话已结束": "Conversation has ended",
+      "对话已结束，您可以<1>开始新的对话</1>或<3>留言</3>": "Conversation has ended, you may <1>continue</1> or <3>leave a message</3>?",
+      "你被移出了黑名单": "You are removed from the blacklist",
+      "表情": "Emoji",
+      "发送图片": "Send picture",
+      "发送视频": "Send video",
+      "发送文件": "Send file",
+      "上传图片": "Upload",
+      "评价": "Evaluate service",
+      "好评": "Great",
+      "中评": "Good",
+      "差评": "Bad",
+      "请填写评价内容（选填）": "Please describe your evaluation (Optional)",
+      "你给出了": "You've sent the evaluation:",
+      "下载": "Download",
+      "接下来由<1>{{name}}</1>为您服务": "Next, <1>{{name}}</1> will serve you",
+      "客服软件由{{企业名称}}提供": "Customer service software provided by {{企业名称}}",
+      "转人工": "Turn to live support",
+      "免费通话": "Free calls",
+      "欢迎使用完全免费的网页回呼与我们通话": "Welcome, please use the fully free web to call us back",
+      "请输入你的电话号码": "Please enter your phone number",
+      "发起通话": "Call",
+      "重新发起通话": "Call again",
+      "请保持电话畅通，客服人员即将致电": "Please keep the phone available, the customer service is about to call",
+      "你将接到「010-52729285」的来电": "You will receive a call from 「010-52729285」",
+      "询前表单": "Inquiry form",
+      "获取验证码失败": "Failed to get verification code",
+      "加载历史消息": "Load previous messages",
+      "加载更多历史消息": "Load more previous messages",
+      "没有更多了": "No previous messages",
+      "加载中...": "Loading...",
+      "排队失败，请刷新重试": "Queuing failed. Please refresh and try again",
+      "抱歉没能理解您的提问，可选择": "Sorry, we failed to understand your question, you can choose",
+      "留言": "Leave a message",
+      "评价失败，请稍后重试": "Evaluation failed. Please try again later",
+      "客服消息": "customer service message",
+      "管理员": "Administrator",
+      "[推广消息]": "[Promotion message]",
+      "「发来了一个文件」": "「Sent a file」",
+      "「发来了一张图片」": "「Sent a picture」",
+      "新消息": "New message",
+      "粘贴图片失败，请用「图片按钮」上传图片": "Failed to paste picture. Please use the 「picture button to upload the picture」",
+      "排队等待中...": "Queuing…",
+      "正在为您转接，请稍候..": "Please wait, connecting through…",
+      "小时": "h",
+      "分钟": "mins",
+      "秒": "s",
+      "网络错误，请稍后重试": "Network error. Please try again later",
+      "请控制": "Please limit",
+      "在1到100个字符": "In 1 to 100 characters",
+      "请填写必填字段": "Please fill the required fields",
+      "请选择": "Please choose",
+      "请输入验证码": "Please enter the verification code",
+      "加载询前表单失败，请稍后重试": "Failed to load the inquiry form, please try again later",
+      "连接已断开，请刷新页面": "Disconnected. You will not be able to see the messages sent by the customer service, Please check the network",
+      "很抱歉您对此回答不满意": "We are really sorry that you are dissatisfied with this answer",
+      "提交失败，请稍候再试": "Failed to submit. Please try again later",
+      "请正确填写手机或带区号的座机号码": "Please fill in the mobile phone number correctly or landline number with area code",
+      "请正确填写验证码": "Please fill in the correct verification code",
+      "请选择分类": "Please select the category",
+      "请正确填写姓名": "Please fill in the name correctly",
+      "请正确填写手机号": "Please fill in the mobile phone number correctly",
+      "请正确填写联系邮箱": "Please fill in the correct email address",
+      "请正确填写微信": "Please fill in the weChat correctly",
+      "请正确填写QQ": "Please fill in the QQ correctly",
+      "请至少填写一项联系方式": "Please fill in at least one contact information",
+      "请保持留言内容在 1～1000 字符内": "Please keep the message in 1 to 1000 characters",
+      "留言失败，请稍候再试": "Failed to leave a message. Please try again later",
+      "取消上传": "Cancel upload",
+      "上传失败": "Upload failed",
+      "上传成功": "Uploaded success",
+      "只能发送图片哦": "You may only send pictures",
+      "只能发送小于 50MB 的文件哦": "You can only send documents less than 50MB",
+      "只能发送小于 5MB 的图片哦": "You can only send photoes less than 5MB",
+      "最多只能发送 2048 个字符哦": "You can only send up to 2048 characters",
+      "请选择评价等级": "Please select the evaluation",
+      "最多只能发送 30 个字符哦": "You may only send up to 30 characters",
+      "最多只能发送 30 个字哦": "You may only send up to 30 words",
+      "抱歉，客服系统暂时无法使用": "Sorry, the customer service system is temporarily down",
+      "当前等待人数": "Numbers of people currently waiting",
+      "如果等不及，可以选择": "If you can’t wait, you may choose",
+      "上传中": "Uploading",
+      "已过期": "Expired",
+      "{{expireTime}}后过期": "Expires after {{expireTime}}",
+      "解决": "Resolved",
+      "已解决": "Resolved",
+      "未解决": "Unresolved",
+      "提交中": "Submitting",
+      "已反馈": "Feedback sent",
+      "长时间未活动窗口已失效，请刷新页面": "The long inactive window has expired, You will not be able to see the messages sent by the customer service, Please check the network",
+      "请至少填写一项": "Please fill out at least one item",
+      "您已成功提交": "You have successfully submitted",
+      "机器人": "Robot",
+      "安全验证码": "Security verification code",
+      "开始免费通话": "Start Free Call",
+      "输入你的手机号码，点击「开始免费通话」按钮，系统将自动为你建立免费通话！": "Enter your mobile number and click the \"Start Free Call\" button, the system will automatically establish a free call for you! ",
+      "发起通话失败，请稍后再试": "Call failed. Please try again later",
+      "已复制": "Copied",
+      "换一换": "Other questions",
+      "常见问题": "FAQ",
+      "客服撤回了一条消息": "{{name}} has recalled a message",
+      "营销机器人结束对话": "the conversation is closed",
+      "系统结束对话": "System closed the conversation",
+      "经常使用": "Frequently Used",
+      "微笑和情感": "Smileys & Emotion",
+      "人和身体": "People & Body",
+      "动物和自然": "Animals & Nature",
+      "食物和饮料": "Food & Drink",
+      "活动": "Activity",
+      "旅行和地点": "Travel & Places",
+      "物体": "Objects",
+      "符号": "Symbols",
+      "旗帜": "Flags",
+      "自定义": "Custom",
+      "表情提示": "Tips: Don't panic, the emoji shows ◻︎ only in input area, just send it, everything will be fine.",
+      "* 支持 jpg 、png、gif、bmp 格式的图片，可上传 5 张，单张最大 5M": "* You can upload up to 5 pictures in jpg, png, gif and svg format with image size no more than 5M.",
+      "字段不能为空": "It can't be empty here",
+      "图形验证码错误，请重新输入": "Verification code error,please re-enter",
+      "{{tel}}必须为数字": "{{tel}} must be a number",
+      "电话号码": "The phone number",
+      "请填写正确的数字": "Please fill in the correct number",
+      "请注意保护自身财产和隐私安全，涉及汇款、转账等务必谨慎。如需投诉举报，请": "Please pay attention to protect your property and privacy, and be careful when it comes to remittance, transfer, etc. If you need a complaint, please",
+      "联系我们": "contact us",
+      "点击此处": "click here",
+      "您的网络连接已断开，{{second}}秒后自动重连": "Your network connection has been disconnected，Automatic reconnection in {{second}} seconds",
+      "立即重连": "Immediately reconnection",
+      "你的网络已恢复正常": "Your network has been restored",
+      "问题已解决": "resolved",
+      "问题未解决": "Unresolved",
+      "客服名片": "Intor",
+      "快捷入口": "Shortcut",
+      "验证码校验失败，请重新验证": "Verification code error,please re-enter",
+      "回复": "Reply",
+      "回复内容已撤回": "Reply content has been withdrawn",
+      "图片加载失败": "Image failed to load",
+      "当前对话不可用": "The current session is not available",
+      "对话不可用": "Dialogue not available",
+      "不支持发送该类型文件": "File type is unsupported",
+      "不支持发送该类型图片": "The type of image is not supported",
+      "上一页": "previous",
+      "下一页": "next",
+      "只能发送视频哦": "Only video can be sent",
+      "当前你的网络不佳，请检查网络后，刷新页面重试": "Your network is currently poor. Please check your network and refresh the page to try again.",
+      "以便于您在应用中选择或上传相册内的内容": "To facilitate selecting or uploading content from your album within the app",
+      "想访问您的相册": "wants to access your album",
+      "以便于您在应用中选择或上传文件": "To facilitate selecting or uploading files within the app",
+      "想访问您的文件": "wants to access your files",
+      "不允许": "Disallow",
+      "好": "yes",
+      "当前应用": "Current App",
+      "简体中文": "Simplified Chinese",
+      "繁体中文": "Traditional Chinese",
+      "英语": "English",
+      "泰语": "Thai",
+      "越南语": "Vietnamese",
+      "印度尼西亚语": "Indonesian",
+      "马来语": "Malay",
+      "印地语": "Hindi",
+      "日语": "Japanese",
+      "葡萄牙语": "Portuguese",
+      "西班牙语": "Spanish",
+      "韩语": "Korean",
+      "俄语": "Russian",
+      "消息包含不规范用语": "The message contains inappropriate language",
+      "[图片]": "[picture]",
+      "[视频]": "[video]",
+      "[文件]": "[file]",
+      "图片涉黄或涉暴": "Images involving pornography or violence",
+      "重置": "reset",
+      "缅甸语": "Burmese",
+      "柬埔寨语": "Cambodian",
+      "菲律宾语": "Filipino",
+      "法语": "French",
+      "老挝语": "Lao",
+      "荷兰语": "Dutch",
+      "德语": "German",
+      "阿拉伯语": "Arabic",
+      "孟加拉语": "Bengali",
+      "土耳其语": "Turkish",
+      "波斯语": "Persian",
+      "意大利语": "Italian",
+      "波兰语": "Polish",
+      "祖鲁语": "Zulu",
+      "留言流量达到上限": "The message traffic limit has been reached",
+      "不存在活跃对话": "No active conversations exist",
+      "推荐问题": "Recommended Questions",
+      "图片内容涉及违规": "The image content involves violations",
+      "发送对话评价邀请": "Send a chat review invitation",
+      "你已评价": "You have reviewed",
+      "你可以输入评价备注": "You can enter comments for your review",
+      "查看详情": "View details",
+      "未识别消息类型": "Unrecognized message type"
+    }
+  },
+  {
+    "url": "https://camorope-client-a.meiqia.com/push/info?browser_id=1381c543cba9381dcb6cfda78bcb801d&ent_id=374382&track_id=380GSNpa5WyKn9lZeNobMYh0JvX&visit_id=3B9JzpsQytNv5EIZGce6Ka594tt&t=1773896510000",
+    "data": {
+      "websocket": true,
+      "origins": [
+        "*:*"
+      ],
+      "entropy": 3352329443,
+      "cookie_needed": true
+    }
+  }
+]

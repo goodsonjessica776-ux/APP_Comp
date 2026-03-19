@@ -11,7 +11,7 @@ interface AdItem {
   date: string;
 }
 
-export default function AdCard({ ad, rank }: { ad: AdItem; rank: number }) {
+export default function AdCard({ ad, rank, onClick }: { ad: AdItem; rank: number; onClick?: (ad: AdItem) => void }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -39,9 +39,10 @@ export default function AdCard({ ad, rank }: { ad: AdItem; rank: number }) {
 
   return (
     <div 
-      className="glass-card rounded-[32px] overflow-hidden flex flex-col group relative"
+      className="glass-card rounded-[32px] overflow-hidden flex flex-col group relative cursor-pointer"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={() => onClick && onClick(ad)}
     >
       {/* Absolute Ranking Badge */}
       <div className={`absolute top-4 left-4 z-20 px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-xl

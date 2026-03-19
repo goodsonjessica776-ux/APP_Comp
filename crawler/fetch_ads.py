@@ -260,7 +260,26 @@ def fetch_ads():
         creative = leaflet.get("creative", {}) or {}
         
         # 兼容 slogan 或是 description
-        title = creative.get("slogan") or creative.get("description") or "未知文案"
+        title = creative.get("slogan") or creative.get("description")
+        
+        if not title:
+            # 尝试从外部字段提取高光或匹配文案
+            content_match = item.get("contentMatch")
+            highlight = item.get("highlight")
+            
+            # 优先使用 contentMatch 如果它是字符串
+            if isinstance(content_match, str) and content_match.strip():
+                title = content_match
+            elif isinstance(highlight, str) and highlight.strip():
+                title = highlight
+            else:
+                title = "未知文案"
+                
+        # 去除 HTML 标签 (如果有的话)
+        import re
+        title = re.sub(r'<[^>]+>', '', title)
+        title = title.replace('\\n', ' ').strip()
+        
         video_id = leaflet.get("id") or str(int(time.time() * 1000))
         impressions = leaflet.get("impression", 0)
         date = leaflet.get("startDate", "Unknown")

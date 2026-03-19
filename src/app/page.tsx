@@ -16,6 +16,7 @@ interface AdItem {
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOrder, setSortOrder] = useState<'desc' | 'asc' | 'date'>('desc');
+  const [selectedAd, setSelectedAd] = useState<AdItem | null>(null);
 
   const filteredAndSortedAds = useMemo(() => {
     const parseImpressions = (val: string | number) => {
@@ -98,7 +99,7 @@ export default function Home() {
         {filteredAndSortedAds.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 md:gap-8">
             {filteredAndSortedAds.map((ad, idx) => (
-              <AdCard key={ad.id} ad={ad} rank={adsData.indexOf(ad) + 1} />
+              <AdCard key={ad.id} ad={ad} rank={adsData.indexOf(ad) + 1} onClick={setSelectedAd} />
             ))}
           </div>
         ) : (
@@ -113,6 +114,37 @@ export default function Home() {
       <footer className="py-12 text-center text-slate-600 text-xs border-t border-white/5">
         &copy; 2026 AdVision Studio. For Internal Team Use Only.
       </footer>
+
+      {/* Video Modal for Sound Playback */}
+      {selectedAd && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"
+          onClick={() => setSelectedAd(null)}
+        >
+          <div 
+            className="relative w-full max-w-[400px] aspect-[9/16] bg-black rounded-[32px] overflow-hidden shadow-2xl border border-white/10"
+            onClick={e => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setSelectedAd(null)} 
+              className="absolute top-4 right-4 z-50 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center text-white/70 hover:text-white hover:bg-black/80 transition-all border border-white/10"
+            >
+              ✕
+            </button>
+            <video 
+              src={`/videos/${selectedAd.videoName}`} 
+              controls 
+              autoPlay 
+              className="w-full h-full object-contain"
+            />
+            {/* Ad Info Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent pointer-events-none">
+              <h3 className="text-white font-medium text-sm line-clamp-3 mb-2">{selectedAd.title}</h3>
+              <p className="text-emerald-400 text-xs font-bold">{selectedAd.impressions.toLocaleString()} 曝光</p>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

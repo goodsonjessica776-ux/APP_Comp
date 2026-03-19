@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import adsData from '@/data/ads.json';
 import AdCard from '@/components/AdCard';
-import { Search, SortDesc, Calendar, Sparkles, Tag, Package, BarChart3, X } from 'lucide-react';
+import { Search, SortDesc, Calendar, Sparkles, Tag, Package, BarChart3, X, LayoutGrid, List, TrendingUp, CalendarDays } from 'lucide-react';
 
 interface AdItem {
   id: string;
@@ -22,6 +22,7 @@ export default function Home() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   const [showChart, setShowChart] = useState(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'table'>('grid');
 
   // Extract all unique tags and categories
   const allTags = useMemo(() => {
@@ -42,6 +43,13 @@ export default function Home() {
     if (clean.endsWith('m')) return parseFloat(clean) * 1000000;
     if (clean.endsWith('k')) return parseFloat(clean) * 1000;
     return parseFloat(clean) || 0;
+  };
+
+  const formatDisplay = (val: string | number) => {
+    if (typeof val === 'string') return val;
+    if (val >= 1000000) return (val / 1000000).toFixed(1) + 'M';
+    if (val >= 1000) return (val / 1000).toFixed(1) + 'K';
+    return val.toLocaleString();
   };
 
   const filteredAndSortedAds = useMemo(() => {
@@ -115,7 +123,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+        <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto items-center">
           {/* Search */}
           <div className="relative group">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500 group-focus-within:text-indigo-400 transition-colors" />
@@ -143,10 +151,28 @@ export default function Home() {
               <Calendar size={16} /> <span className="hidden sm:inline">最新</span>
             </button>
           </div>
+
+          {/* View Toggle - Grid / Table */}
+          <div className="flex bg-black/40 border border-white/10 rounded-2xl p-1">
+            <button 
+              onClick={() => setViewMode('grid')}
+              className={`px-3 py-2 rounded-xl text-sm transition-all flex items-center gap-1.5 ${viewMode === 'grid' ? 'bg-indigo-600 text-white shadow-lg' : 'text-slate-400 hover:text-white'}`}
+              title="视频模式"
+            >
+              <LayoutGrid size={16} />
+            </button>
+            <button 
+              onClick={() => setViewMode('table')}
+              className={`px-3 py-2 rounded-xl text-sm transition-all flex items-center gap-1.5 ${viewMode === 'table' ? 'bg-indigo-600 text-white shadow-lg' : 'text-slate-400 hover:text-white'}`}
+              title="文案模式"
+            >
+              <List size={16} />
+            </button>
+          </div>
         </div>
       </header>
 
-      {/* Filter Area - Between search and video grid */}
+      {/* Filter Area */}
       <section className="glass rounded-[28px] p-6 space-y-5">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-6">
@@ -249,10 +275,12 @@ export default function Home() {
         )}
       </section>
 
-      {/* Grid Area */}
+      {/* Content Area */}
       <section className="space-y-6">
         <div className="flex items-center justify-between px-2">
-          <h2 className="text-slate-400 text-sm font-medium">发现 ({filteredAndSortedAds.length} 条爆款素材)</h2>
+          <h2 className="text-slate-400 text-sm font-medium">
+            {viewMode === 'grid' ? '🎬 视频模式' : '📝 文案模式'} · 发现 ({filteredAndSortedAds.length} 条爆款素材)
+          </h2>
           {hasActiveFilters && (
             <div className="flex items-center gap-2 text-xs text-slate-500">
               {selectedCategory && <span className="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">{selectedCategory}</span>}
@@ -262,11 +290,68 @@ export default function Home() {
         </div>
 
         {filteredAndSortedAds.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 md:gap-8">
-            {filteredAndSortedAds.map((ad, idx) => (
-              <AdCard key={ad.id} ad={ad} rank={idx + 1} onClick={setSelectedAd} />
-            ))}
-          </div>
+          viewMode === 'grid' ? (
+            /* === VIDEO GRID VIEW === */
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 md:gap-8">
+              {filteredAndSortedAds.map((ad, idx) => (
+                <AdCard key={ad.id} ad={ad} rank={idx + 1} onClick={setSelectedAd} />
+              ))}
+            </div>
+          ) : (
+            /* === TABLE / TEXT VIEW === */
+            <div className="glass rounded-[24px] overflow-hidden">
+              {/* Table Header */}
+              <div className="grid grid-cols-[auto_1fr_120px_200px_120px] gap-4 px-6 py-4 border-b border-white/5 text-[10px] text-slate-500 uppercase tracking-wider font-semibold">
+                <span className="w-12 text-center">#</span>
+                <span>广告文案</span>
+                <span className="text-center">预估曝光</span>
+                <span className="text-center">标签</span>
+                <span className="text-center">更新时间</span>
+              </div>
+              {/* Table Rows */}
+              {filteredAndSortedAds.map((ad, idx) => (
+                <div
+                  key={ad.id}
+                  onClick={() => setSelectedAd(ad)}
+                  className="grid grid-cols-[auto_1fr_120px_200px_120px] gap-4 px-6 py-4 border-b border-white/[0.03] items-center hover:bg-white/[0.03] cursor-pointer transition-colors group"
+                >
+                  {/* Rank */}
+                  <div className="w-12 flex justify-center">
+                    <span className={`px-3 py-1 rounded-full text-[10px] font-bold ${
+                      idx < 3 ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-white' : 'bg-white/5 text-slate-500'
+                    }`}>
+                      {idx + 1}
+                    </span>
+                  </div>
+                  {/* Title */}
+                  <div className="min-w-0">
+                    <p className="text-sm text-slate-200 group-hover:text-indigo-400 transition-colors truncate font-medium">
+                      {ad.title}
+                    </p>
+                    {ad.category && (
+                      <span className="text-[10px] text-slate-500 mt-0.5 inline-block">{ad.category}</span>
+                    )}
+                  </div>
+                  {/* Impressions */}
+                  <div className="text-center">
+                    <span className="text-sm font-bold text-emerald-400">{formatDisplay(ad.impressions)}</span>
+                  </div>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1 justify-center">
+                    {ad.tags?.map(tag => (
+                      <span key={tag} className="px-2 py-0.5 rounded-full bg-indigo-500/10 text-[10px] text-indigo-300 border border-indigo-500/15 font-medium whitespace-nowrap">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  {/* Date */}
+                  <div className="text-center">
+                    <span className="text-[11px] text-slate-400">{ad.date}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )
         ) : (
           <div className="glass rounded-[40px] border-dashed border-2 py-32 flex flex-col items-center gap-4">
             <p className="text-slate-500">未找到相关素材</p>
@@ -302,14 +387,13 @@ export default function Home() {
               autoPlay 
               className="w-full h-full object-contain"
             />
-            {/* Ad Info Overlay */}
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent pointer-events-none">
               <h3 className="text-white font-medium text-sm line-clamp-3 mb-2">{selectedAd.title}</h3>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 {selectedAd.category && (
                   <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] border border-emerald-500/20">{selectedAd.category}</span>
                 )}
-                <span className="text-emerald-400 text-xs font-bold">{selectedAd.impressions.toLocaleString()} 曝光</span>
+                <span className="text-emerald-400 text-xs font-bold">{formatDisplay(selectedAd.impressions)} 曝光</span>
               </div>
               {selectedAd.tags && selectedAd.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1.5 mt-2">

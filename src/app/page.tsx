@@ -13,6 +13,10 @@ interface AdItem {
   date: string;
   category?: string;
   tags?: string[];
+  delivery_days?: number;
+  activity_index?: number;
+  today_exposure?: number;
+  channels?: any[];
 }
 
 // Safely handle adsData import

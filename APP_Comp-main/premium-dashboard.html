@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>有米云竞品素材库 | Premium Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --glass-bg: rgba(17, 24, 39, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --accent: #3b82f6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(circle at top left, #1e293b, #0f172a);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .ad-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .ad-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent);
+        }
+
+        .video-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 10px;
+        }
+
+        /* Loading Animation */
+        .shimmer {
+            background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+    </style>
+</head>
+<body class="custom-scrollbar">
+    <!-- Header -->
+    <nav class="sticky top-0 z-50 glass px-6 py-4 mb-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 p-2 rounded-lg">
+                    <i data-lucide="layout-dashboard" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">有米云竞品素材库</h1>
+                    <p class="text-xs text-slate-400">Team Dashboard • Top 素材分析</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <div class="relative group">
+                    <i data-lucide="search" class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"></i>
+                    <input type="text" id="searchInput" placeholder="搜索素材文案..." 
+                        class="bg-slate-800/50 border border-slate-700 rounded-full py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all w-64">
+                </div>
+                <select id="sortSelect" class="bg-slate-800/50 border border-slate-700 rounded-full py-2 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer">
+                    <option value="impressions">按曝光量排序</option>
+                    <option value="date">按最新日期</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-6 pb-20">
+        <!-- Stats Summary -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+            <div class="glass rounded-2xl p-6 flex items-center gap-4">
+                <div class="bg-green-500/20 p-3 rounded-xl text-green-400">
+                    <i data-lucide="video" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">素材总量</p>
+                    <h3 class="text-2xl font-bold" id="totalAds">0</h3>
+                </div>
+            </div>
+            <div class="glass rounded-2xl p-6 flex items-center gap-4">
+                <div class="bg-blue-500/20 p-3 rounded-xl text-blue-400">
+                    <i data-lucide="trending-up" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">最高曝光</p>
+                    <h3 class="text-2xl font-bold" id="maxImpressions">0</h3>
+                </div>
+            </div>
+            <div class="glass rounded-2xl p-6 flex items-center gap-4">
+                <div class="bg-purple-500/20 p-3 rounded-xl text-purple-400">
+                    <i data-lucide="calendar" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">最新更新</p>
+                    <h3 class="text-2xl font-bold underline decoration-purple-500/30" id="lastUpdated">-</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ad Grid -->
+        <div id="adGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Cards injected by JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden flex flex-col items-center justify-center py-40 opacity-50">
+            <i data-lucide="search-x" class="w-16 h-16 mb-4"></i>
+            <p class="text-lg">未找到相关素材</p>
+        </div>
+    </main>
+
+    <!-- Modal for Video Expansion -->
+    <div id="videoModal" class="fixed inset-0 z-[60] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="glass max-w-5xl w-full rounded-3xl overflow-hidden relative z-10">
+            <button onclick="closeModal()" class="absolute top-4 right-4 bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-2/3 bg-black aspect-video flex items-center justify-center">
+                    <video id="modalVideo" controls class="max-h-full max-w-full"></video>
+                </div>
+                <div class="lg:w-1/3 p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="bg-blue-600/20 text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-blue-500/30 uppercase tracking-tighter">广告素材</span>
+                            <span id="modalDate" class="text-xs text-slate-400 font-mono">2026-03-xx</span>
+                        </div>
+                        <h2 id="modalTitle" class="text-xl font-bold leading-tight mb-6">素材文案详细内容...</h2>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between text-sm py-3 border-b border-slate-700/50">
+                                <span class="text-slate-400">总曝光量</span>
+                                <span id="modalImpressions" class="font-bold text-blue-400">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Embedded data to avoid CORS issues on file:// protocol
+        const adsData = [
+  {
+    "id": "9GCArS7f52VfbeXV87aNIQ==",
+    "title": "豆包",
+    "impressions": "3.2M",
+    "videoName": "9GCArS7f52VfbeXV87aNIQ==.mp4",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "bN64UJXLMTOSgPwXDfCTpg==",
+    "title": "豆包",
+    "impressions": "3.2M",
+    "videoName": "bN64UJXLMTOSgPwXDfCTpg==.mp4",
+    "date": "2026-03-15"
+  },
+  {
+    "id": "4FYYszPW4MzzTr4VMwh2vQ==",
+    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
+    "impressions": "2.5M",
+    "videoName": "4FYYszPW4MzzTr4VMwh2vQ==.mp4",
+    "date": "2026-02-28"
+  },
+  {
+    "id": "yCb2WpdEnC-PQe42i~xXHA==",
+    "title": "豆包",
+    "impressions": "1.6M",
+    "videoName": "yCb2WpdEnC-PQe42i~xXHA==.mp4",
+    "date": "2026-03-16"
+  },
+  {
+    "id": "whje4Qkbgy7cNMeTpCZC1Q==",
+    "title": "豆包",
+    "impressions": "1.6M",
+    "videoName": "whje4Qkbgy7cNMeTpCZC1Q==.mp4",
+    "date": "2026-03-16"
+  },
+  {
+    "id": "kKdO~j8TXBrIROiIvefnJQ==",
+    "title": "豆包",
+    "impressions": "1.6M",
+    "videoName": "kKdO~j8TXBrIROiIvefnJQ==.mp4",
+    "date": "2026-03-16"
+  },
+  {
+    "id": "mKU8njxEMrLVwaQWbL8Yjw==",
+    "title": "豆包",
+    "impressions": "1.6M",
+    "videoName": "mKU8njxEMrLVwaQWbL8Yjw==.mp4",
+    "date": "2026-03-16"
+  },
+  {
+    "id": "LhqQnlX3Dzm3FpyMtUIHcw==",
+    "title": "豆包",
+    "impressions": "1.6M",
+    "videoName": "LhqQnlX3Dzm3FpyMtUIHcw==.mp4",
+    "date": "2026-03-16"
+  },
+  {
+    "id": "9bAO1zJGFSDvhKW~PvExvA==",
+    "title": "豆包",
+    "impressions": "1.6M",
+    "videoName": "9bAO1zJGFSDvhKW~PvExvA==.mp4",
+    "date": "2026-03-16"
+  },
+  {
+    "id": "5hBMDpgJBMdLtEgOIS9p5A==",
+    "title": "国产豆包AI太香了，一款强大的ai工具#豆包app#豆包",
+    "impressions": "1.6M",
+    "videoName": "5hBMDpgJBMdLtEgOIS9p5A==.mp4",
+    "date": "2026-03-18"
+  },
+  {
+    "id": "kBKsBc4oh5K2j0CsrZrRWg==",
+    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
+    "impressions": "829.9K",
+    "videoName": "kBKsBc4oh5K2j0CsrZrRWg==.mp4",
+    "date": "2026-03-18"
+  },
+  {
+    "id": "t8wGr3PztBsZK1qE8vpdRg==",
+    "title": "错题难题找豆包，助力高效学习",
+    "impressions": "811.1K",
+    "videoName": "t8wGr3PztBsZK1qE8vpdRg==.mp4",
+    "date": "2026-03-18"
+  },
+  {
+    "id": "cT7BlBwbVt6ZF8MYVy3~ew==",
+    "title": "考研生必备的复试模拟神器#考研#考研复试#豆包app",
+    "impressions": "597.1K",
+    "videoName": "cT7BlBwbVt6ZF8MYVy3~ew==.mp4",
+    "date": "2026-03-10"
+  },
+  {
+    "id": "gFmKutx5wxHKvxPWslsEyA==",
+    "title": "无广告全免费，打工人福音！文案创意、活动策划、总结一键生成..",
+    "impressions": "388.7K",
+    "videoName": "gFmKutx5wxHKvxPWslsEyA==.mp4",
+    "date": "2025-10-28"
+  },
+  {
+    "id": "oNwJsqU9IlG7P--exlB76g==",
+    "title": "豆包APP，这么好用的AI，你居然还不知道！",
+    "impressions": "369.3K",
+    "videoName": "oNwJsqU9IlG7P--exlB76g==.mp4",
+    "date": "2026-03-18"
+  },
+  {
+    "id": "p6kW4pzaLtHjRMQqkn7TPg==",
+    "title": "这么好用的AI助手你还不知道？海量智能答疑！",
+    "impressions": "338.7K",
+    "videoName": "p6kW4pzaLtHjRMQqkn7TPg==.mp4",
+    "date": "2026-03-03"
+  },
+  {
+    "id": "1aEqbGFOQ-GEcdFRwH-WXw==",
+    "title": "来豆包，定制专属你的旅游攻略！",
+    "impressions": "338.6K",
+    "videoName": "1aEqbGFOQ-GEcdFRwH-WXw==.mp4",
+    "date": "2025-10-20"
+  },
+  {
+    "id": "HTyUEWlxqyHo~xwmUipp-w==",
+    "title": "用豆包AI修图，拯救废片，还原美貌",
+    "impressions": "329.2K",
+    "videoName": "HTyUEWlxqyHo~xwmUipp-w==.mp4",
+    "date": "2026-03-18"
+  },
+  {
+    "id": "5oput7ZydVvbceTnS0aFhw==",
+    "title": "不会拍照？用豆包AI修图，拯救废片",
+    "impressions": "316.3K",
+    "videoName": "5oput7ZydVvbceTnS0aFhw==.mp4",
+    "date": "2026-03-18"
+  },
+  {
+    "id": "ppMnorMzKM9V6Bh0Uz1KQg==",
+    "title": "免费AI一键搜索全新方案，效率嘎嘎高！",
+    "impressions": "311.6K",
+    "videoName": "ppMnorMzKM9V6Bh0Uz1KQg==.mp4",
+    "date": "2026-02-27"
+  },
+  {
+    "id": "5L6~0YL41c0LK9Md3iiZvQ==",
+    "title": "用豆包AI修图，拯救废片，还原美貌",
+    "impressions": "201.8K",
+    "videoName": "5L6~0YL41c0LK9Md3iiZvQ==.mp4",
+    "date": "2025-10-21"
+  },
+  {
+    "id": "YoMQgO6qtG9KR6LlQZTVhQ==",
+    "title": "免费用就是爽！豆包智能助手来啦!太炸裂了！",
+    "impressions": "178.8K",
+    "videoName": "YoMQgO6qtG9KR6LlQZTVhQ==.mp4",
+    "date": "2026-01-14"
+  }
+];
+        const adGrid = document.getElementById('adGrid');
+        const searchInput = document.getElementById('searchInput');
+        const sortSelect = document.getElementById('sortSelect');
+        const totalAdsEl = document.getElementById('totalAds');
+        const maxImprEl = document.getElementById('maxImpressions');
+        const lastUpdatedEl = document.getElementById('lastUpdated');
+
+        function init() {
+            lucide.createIcons();
+            updateStats();
+            renderAds(adsData);
+        }
+
+        function updateStats() {
+            totalAdsEl.innerText = adsData.length;
+            const impressions = adsData.map(a => a.impressions || 0);
+            maxImprEl.innerText = impressions.length ? Math.max(...impressions).toLocaleString() : '0';
+            const dates = adsData.map(a => a.date).filter(Boolean);
+            lastUpdatedEl.innerText = dates.length ? [...dates].sort().pop() : '-';
+        }
+
+        function renderAds(data) {
+            adGrid.innerHTML = '';
+            const emptyState = document.getElementById('emptyState');
+            
+            if (data.length === 0) {
+                emptyState.classList.remove('hidden');
+                return;
+            }
+            emptyState.classList.add('hidden');
+
+            data.forEach((ad, index) => {
+                const card = document.createElement('div');
+                card.className = 'ad-card glass rounded-2xl overflow-hidden cursor-pointer group';
+                card.onclick = () => openModal(ad);
+                
+                card.innerHTML = `
+                    <div class="relative aspect-[3/4] bg-slate-900 overflow-hidden">
+                        <video class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500" 
+                               loop muted onmouseover="this.play()" onmouseout="this.pause()">
+                            <source src="public/videos/${ad.videoName}" type="video/mp4">
+                        </video>
+                        <div class="video-overlay absolute inset-0 flex flex-col justify-end p-4">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-[10px] font-mono border border-white/10 uppercase">
+                                Rank #${index + 1}
+                            </span>
+                            <div class="flex items-center gap-1.5 text-blue-400 mb-1">
+                                <i data-lucide="eye" class="w-3.5 h-3.5"></i>
+                                <span class="text-sm font-bold tracking-tight">${(ad.impressions || 0).toLocaleString()}</span>
+                            </div>
+                            <p class="text-xs text-slate-200 font-medium line-clamp-2 leading-relaxed">${ad.title}</p>
+                        </div>
+                    </div>
+                    <div class="p-3 flex items-center justify-between text-[10px] text-slate-500 font-mono">
+                        <span>ID: ${ad.id.slice(0, 8)}</span>
+                        <span>${ad.date || '-'}</span>
+                    </div>
+                `;
+                adGrid.appendChild(card);
+            });
+            lucide.createIcons();
+        }
+
+        function handleFilter() {
+            const query = searchInput.value.toLowerCase();
+            const sort = sortSelect.value;
+            
+            let filtered = adsData.filter(ad => 
+                ad.title.toLowerCase().includes(query)
+            );
+
+            if (sort === 'impressions') {
+                filtered.sort((a, b) => (b.impressions || 0) - (a.impressions || 0));
+            } else {
+                filtered.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+            }
+
+            renderAds(filtered);
+        }
+
+        function openModal(ad) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            document.getElementById('modalTitle').innerText = ad.title;
+            document.getElementById('modalDate').innerText = ad.date || 'Unknown Date';
+            document.getElementById('modalImpressions').innerText = (ad.impressions || 0).toLocaleString();
+            
+            video.src = `public/videos/${ad.videoName}`;
+            modal.classList.remove('hidden');
+            video.play();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            modal.classList.add('hidden');
+            video.pause();
+        }
+
+        searchInput.addEventListener('input', handleFilter);
+        sortSelect.addEventListener('change', handleFilter);
+
+        init();
+    </script>
+</body>
+</html>

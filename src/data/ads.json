@@ -1,416 +1,972 @@
 [
   {
-    "id": "z1FrpR6Z0UzvgFkHs-A0Yw==",
-    "title": "豆包",
-    "impressions": "4.5M",
-    "videoName": "z1FrpR6Z0UzvgFkHs-A0Yw==.mp4",
-    "date": "2026-03-16",
-    "category": "生活服务",
-    "tags": [
-      "促销",
-      "剧情",
-      "口播"
-    ]
-  },
-  {
-    "id": "4HVfUmFiqfHJyw-CzIPhZw==",
-    "title": "豆包",
-    "impressions": "4.5M",
-    "videoName": "4HVfUmFiqfHJyw-CzIPhZw==.mp4",
-    "date": "2026-03-17",
-    "category": "社交",
-    "tags": [
-      "数据对比",
-      "剧情",
-      "明星代言",
-      "促销"
-    ]
-  },
-  {
-    "id": "EFSDDNupfM5~nTH4uRiOCA==",
-    "title": "豆包",
-    "impressions": "4.5M",
-    "videoName": "EFSDDNupfM5~nTH4uRiOCA==.mp4",
-    "date": "2026-03-01",
-    "category": "工具",
-    "tags": [
-      "剧情",
-      "明星代言"
-    ]
-  },
-  {
-    "id": "7V2KVqtOGpLHvqbqohcdGg==",
-    "title": "豆包",
-    "impressions": "4.5M",
-    "videoName": "7V2KVqtOGpLHvqbqohcdGg==.mp4",
-    "date": "2026-03-15",
-    "category": "电商",
-    "tags": [
-      "高能混剪",
-      "促销",
-      "数据对比"
-    ]
-  },
-  {
-    "id": "4FYYszPW4MzzTr4VMwh2vQ==",
-    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
-    "impressions": "3.1M",
-    "videoName": "4FYYszPW4MzzTr4VMwh2vQ==.mp4",
-    "date": "2026-02-28",
-    "category": "游戏",
-    "tags": [
-      "促销",
-      "实拍演示",
-      "动画",
-      "第一人称"
-    ]
-  },
-  {
-    "id": "9GCArS7f52VfbeXV87aNIQ==",
-    "title": "豆包",
-    "impressions": "2.1M",
-    "videoName": "9GCArS7f52VfbeXV87aNIQ==.mp4",
-    "date": "2026-03-04",
-    "category": "社交",
-    "tags": [
-      "测评",
-      "数据对比"
-    ]
-  },
-  {
-    "id": "bN64UJXLMTOSgPwXDfCTpg==",
-    "title": "豆包",
-    "impressions": "2.1M",
-    "videoName": "bN64UJXLMTOSgPwXDfCTpg==.mp4",
-    "date": "2026-03-15",
-    "category": "电商",
-    "tags": [
-      "动画",
-      "测评"
-    ]
-  },
-  {
-    "id": "kBKsBc4oh5K2j0CsrZrRWg==",
+    "id": "1526368496",
     "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
     "impressions": "1.6M",
-    "videoName": "kBKsBc4oh5K2j0CsrZrRWg==.mp4",
-    "date": "2026-03-18",
-    "category": "教育",
-    "tags": [
-      "动画",
-      "测评",
-      "第一人称"
-    ]
-  },
-  {
-    "id": "9bAO1zJGFSDvhKW~PvExvA==",
-    "title": "豆包",
-    "impressions": "1.1M",
-    "videoName": "9bAO1zJGFSDvhKW~PvExvA==.mp4",
-    "date": "2026-03-16",
+    "videoName": "1526368496.mp4",
+    "date": "2026-03-20",
     "category": "游戏",
     "tags": [
       "高能混剪",
-      "第一人称",
-      "测评"
-    ]
-  },
-  {
-    "id": "yCb2WpdEnC-PQe42i~xXHA==",
-    "title": "豆包",
-    "impressions": "1.1M",
-    "videoName": "yCb2WpdEnC-PQe42i~xXHA==.mp4",
-    "date": "2026-03-16",
-    "category": "社交",
-    "tags": [
-      "剧情",
-      "数据对比"
-    ]
-  },
-  {
-    "id": "whje4Qkbgy7cNMeTpCZC1Q==",
-    "title": "豆包",
-    "impressions": "1.1M",
-    "videoName": "whje4Qkbgy7cNMeTpCZC1Q==.mp4",
-    "date": "2026-03-16",
-    "category": "社交",
-    "tags": [
-      "动画",
-      "第一人称",
-      "高能混剪",
-      "测评"
-    ]
-  },
-  {
-    "id": "kKdO~j8TXBrIROiIvefnJQ==",
-    "title": "豆包",
-    "impressions": "1.1M",
-    "videoName": "kKdO~j8TXBrIROiIvefnJQ==.mp4",
-    "date": "2026-03-16",
-    "category": "电商",
-    "tags": [
       "口播",
-      "测评"
-    ]
-  },
-  {
-    "id": "mKU8njxEMrLVwaQWbL8Yjw==",
-    "title": "豆包",
-    "impressions": "1.1M",
-    "videoName": "mKU8njxEMrLVwaQWbL8Yjw==.mp4",
-    "date": "2026-03-16",
-    "category": "教育",
-    "tags": [
-      "高能混剪",
-      "测评",
-      "明星代言"
-    ]
-  },
-  {
-    "id": "LhqQnlX3Dzm3FpyMtUIHcw==",
-    "title": "豆包",
-    "impressions": "1.1M",
-    "videoName": "LhqQnlX3Dzm3FpyMtUIHcw==.mp4",
-    "date": "2026-03-16",
-    "category": "游戏",
-    "tags": [
-      "明星代言",
-      "第一人称"
-    ]
-  },
-  {
-    "id": "5hBMDpgJBMdLtEgOIS9p5A==",
-    "title": "国产豆包AI太香了，一款强大的ai工具#豆包app#豆包",
-    "impressions": "1.1M",
-    "videoName": "5hBMDpgJBMdLtEgOIS9p5A==.mp4",
-    "date": "2026-03-18",
-    "category": "电商",
-    "tags": [
-      "第一人称",
-      "动画",
-      "实拍演示",
-      "测评"
-    ]
-  },
-  {
-    "id": "t8wGr3PztBsZK1qE8vpdRg==",
-    "title": "错题难题找豆包，助力高效学习",
-    "impressions": "570.6K",
-    "videoName": "t8wGr3PztBsZK1qE8vpdRg==.mp4",
-    "date": "2026-03-18",
-    "category": "教育",
-    "tags": [
       "促销",
-      "测评",
-      "高能混剪"
-    ]
-  },
-  {
-    "id": "vtSWURpIfGQcY~cP~cjQ2w==",
-    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
-    "impressions": "523.6K",
-    "videoName": "vtSWURpIfGQcY~cP~cjQ2w==.mp4",
-    "date": "2026-03-17",
-    "category": "教育",
-    "tags": [
-      "测评",
-      "剧情",
-      "第一人称"
-    ]
-  },
-  {
-    "id": "FnW8RrlTt4q5BVi6qN6p0Q==",
-    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
-    "impressions": "461.6K",
-    "videoName": "FnW8RrlTt4q5BVi6qN6p0Q==.mp4",
-    "date": "2026-03-17",
-    "category": "生活服务",
-    "tags": [
-      "促销",
-      "实拍演示",
-      "测评"
-    ]
-  },
-  {
-    "id": "P6QNTFYKWx7DaHuSXm9S4g==",
-    "title": "用豆包AI修图，拯救废片，还原美貌",
-    "impressions": "354.1K",
-    "videoName": "P6QNTFYKWx7DaHuSXm9S4g==.mp4",
-    "date": "2026-03-10",
-    "category": "生活服务",
-    "tags": [
-      "动画",
-      "高能混剪",
-      "实拍演示",
-      "促销"
-    ]
-  },
-  {
-    "id": "Pa7dn8a7aLpj5PmXajPlog==",
-    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
-    "impressions": "346.6K",
-    "videoName": "Pa7dn8a7aLpj5PmXajPlog==.mp4",
-    "date": "2026-03-18",
-    "category": "生活服务",
-    "tags": [
-      "明星代言",
-      "高能混剪",
       "实拍演示"
+    ],
+    "delivery_days": "3",
+    "activity_index": 100,
+    "today_exposure": "1.6M",
+    "channels": [
+      "小米联盟媒体"
     ]
   },
   {
-    "id": "KO4yzzl6ycB~v5LSzLxEjw==",
+    "id": "1495924594",
     "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
-    "impressions": "327.6K",
-    "videoName": "KO4yzzl6ycB~v5LSzLxEjw==.mp4",
-    "date": "2026-03-17",
+    "impressions": "273.2K",
+    "videoName": "1495924594.mp4",
+    "date": "2026-03-20",
     "category": "电商",
     "tags": [
       "实拍演示",
-      "第一人称",
-      "口播"
-    ]
-  },
-  {
-    "id": "JRVF3ifvtx0eUNS8Wxb9Mg==",
-    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
-    "impressions": "308.2K",
-    "videoName": "JRVF3ifvtx0eUNS8Wxb9Mg==.mp4",
-    "date": "2026-03-17",
-    "category": "游戏",
-    "tags": [
-      "促销",
-      "口播"
-    ]
-  },
-  {
-    "id": "gFmKutx5wxHKvxPWslsEyA==",
-    "title": "无广告全免费，打工人福音！文案创意、活动策划、总结一键生成..",
-    "impressions": "288.5K",
-    "videoName": "gFmKutx5wxHKvxPWslsEyA==.mp4",
-    "date": "2025-10-28",
-    "category": "生活服务",
-    "tags": [
       "明星代言",
-      "促销",
-      "剧情"
+      "第一人称",
+      "高能混剪"
+    ],
+    "delivery_days": "21",
+    "activity_index": 100,
+    "today_exposure": "273.2K",
+    "channels": [
+      "小米联盟媒体"
     ]
   },
   {
-    "id": "xgQoXF3OvUGz-8Mpeqrt1g==",
-    "title": "用豆包AI修图，拯救废片，还原美貌",
-    "impressions": "288.1K",
-    "videoName": "xgQoXF3OvUGz-8Mpeqrt1g==.mp4",
-    "date": "2026-03-16",
-    "category": "工具",
-    "tags": [
-      "高能混剪",
-      "测评",
-      "实拍演示",
-      "数据对比"
-    ]
-  },
-  {
-    "id": "3bFgMILcfpsAoPGU~iF0sQ==",
-    "title": "智能生活从豆包开始，AI赋能，美好触手可及！",
-    "impressions": "288.1K",
-    "videoName": "3bFgMILcfpsAoPGU~iF0sQ==.mp4",
-    "date": "2026-03-16",
-    "category": "电商",
-    "tags": [
-      "口播",
-      "促销"
-    ]
-  },
-  {
-    "id": "cT7BlBwbVt6ZF8MYVy3~ew==",
-    "title": "考研生必备的复试模拟神器#考研#考研复试#豆包app",
-    "impressions": "275.6K",
-    "videoName": "cT7BlBwbVt6ZF8MYVy3~ew==.mp4",
-    "date": "2026-03-10",
-    "category": "教育",
-    "tags": [
-      "促销",
-      "数据对比",
-      "测评"
-    ]
-  },
-  {
-    "id": "p6kW4pzaLtHjRMQqkn7TPg==",
-    "title": "这么好用的AI助手你还不知道？海量智能答疑！",
-    "impressions": "268.0K",
-    "videoName": "p6kW4pzaLtHjRMQqkn7TPg==.mp4",
-    "date": "2026-03-03",
-    "category": "工具",
-    "tags": [
-      "高能混剪",
-      "剧情",
-      "数据对比"
-    ]
-  },
-  {
-    "id": "oNwJsqU9IlG7P--exlB76g==",
+    "id": "1525170635",
     "title": "豆包APP，这么好用的AI，你居然还不知道！",
-    "impressions": "260.3K",
-    "videoName": "oNwJsqU9IlG7P--exlB76g==.mp4",
-    "date": "2026-03-18",
-    "category": "生活服务",
+    "impressions": "782.4K",
+    "videoName": "1525170635.mp4",
+    "date": "2026-03-20",
+    "category": "电商",
     "tags": [
-      "测评",
-      "剧情",
-      "数据对比"
+      "第一人称",
+      "数据对比",
+      "明星代言",
+      "动画"
+    ],
+    "delivery_days": "3",
+    "activity_index": 100,
+    "today_exposure": "782.4K",
+    "channels": [
+      "OPPO联盟媒体"
     ]
   },
   {
-    "id": "ppMnorMzKM9V6Bh0Uz1KQg==",
-    "title": "免费AI一键搜索全新方案，效率嘎嘎高！",
-    "impressions": "251.1K",
-    "videoName": "ppMnorMzKM9V6Bh0Uz1KQg==.mp4",
-    "date": "2026-02-27",
+    "id": "520671928",
+    "title": "上班族在用的打工神器，你也抓紧来试试吧",
+    "impressions": "603.7K",
+    "videoName": "520671928.mp4",
+    "date": "2026-03-20",
+    "category": "电商",
+    "tags": [
+      "测评",
+      "动画"
+    ],
+    "delivery_days": "42",
+    "activity_index": 100,
+    "today_exposure": "603.7K",
+    "channels": [
+      "优量汇联盟",
+      "QQ",
+      "腾讯视频",
+      "QQ 音乐"
+    ]
+  },
+  {
+    "id": "708864122",
+    "title": "免费用就是爽！豆包智能助手来啦!太炸裂了！",
+    "impressions": "191.1K",
+    "videoName": "708864122.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "测评",
+      "第一人称"
+    ],
+    "delivery_days": "65",
+    "activity_index": 100,
+    "today_exposure": "191.1K",
+    "channels": [
+      "QQ 音乐",
+      "QQ",
+      "腾讯视频"
+    ]
+  },
+  {
+    "id": "1524645115",
+    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
+    "impressions": "1.9M",
+    "videoName": "1524645115.mp4",
+    "date": "2026-03-20",
+    "category": "工具",
+    "tags": [
+      "动画",
+      "实拍演示"
+    ],
+    "delivery_days": "4",
+    "activity_index": 100,
+    "today_exposure": "1.9M",
+    "channels": [
+      "小米联盟媒体"
+    ]
+  },
+  {
+    "id": "528860397",
+    "title": "无广告全免费，打工人福音！文案创意、活动策划、总结一键生成",
+    "impressions": "456.4K",
+    "videoName": "528860397.mp4",
+    "date": "2026-03-20",
     "category": "游戏",
     "tags": [
-      "高能混剪",
-      "数据对比",
-      "实拍演示"
-    ]
-  },
-  {
-    "id": "4OTPC~IRrgGG0YAOVR2KmA==",
-    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
-    "impressions": "243.2K",
-    "videoName": "4OTPC~IRrgGG0YAOVR2KmA==.mp4",
-    "date": "2026-03-16",
-    "category": "社交",
-    "tags": [
       "口播",
-      "测评",
-      "实拍演示",
-      "高能混剪"
+      "测评"
+    ],
+    "delivery_days": "19",
+    "activity_index": 100,
+    "today_exposure": "456.4K",
+    "channels": [
+      "优量汇联盟",
+      "腾讯视频",
+      "QQ"
     ]
   },
   {
-    "id": "HTyUEWlxqyHo~xwmUipp-w==",
-    "title": "用豆包AI修图，拯救废片，还原美貌",
-    "impressions": "231.5K",
-    "videoName": "HTyUEWlxqyHo~xwmUipp-w==.mp4",
-    "date": "2026-03-18",
+    "id": "1327622824",
+    "title": "被豆包惊艳到！从运动计划制定到职业规划建议?",
+    "impressions": "179.7K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
     "category": "生活服务",
     "tags": [
+      "高能混剪",
+      "明星代言",
+      "口播",
+      "数据对比"
+    ],
+    "delivery_days": "4",
+    "activity_index": 100,
+    "today_exposure": "179.7K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "6og567d~tRLwu-SrUlEJfA==",
+    "title": "随时帮忙的 AI 助手",
+    "impressions": "226.9K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "工具",
+    "tags": [
+      "剧情",
+      "测评",
+      "数据对比"
+    ],
+    "delivery_days": "20",
+    "activity_index": 100,
+    "today_exposure": "226.9K",
+    "channels": [
+      "小米联盟媒体"
+    ]
+  },
+  {
+    "id": "1514529551",
+    "title": "用豆包AI修图，拯救废片，还原美貌",
+    "impressions": "2.5M",
+    "videoName": "1514529551.mp4",
+    "date": "2026-03-20",
+    "category": "游戏",
+    "tags": [
+      "第一人称",
+      "高能混剪",
+      "数据对比",
+      "促销"
+    ],
+    "delivery_days": "11",
+    "activity_index": 100,
+    "today_exposure": "2.5M",
+    "channels": [
+      "小米联盟媒体"
+    ]
+  },
+  {
+    "id": "1524620612",
+    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
+    "impressions": "2.8M",
+    "videoName": "1524620612.mp4",
+    "date": "2026-03-20",
+    "category": "生活服务",
+    "tags": [
+      "数据对比",
+      "测评",
+      "实拍演示",
+      "明星代言"
+    ],
+    "delivery_days": "4",
+    "activity_index": 100,
+    "today_exposure": "2.8M",
+    "channels": [
+      "小米联盟媒体"
+    ]
+  },
+  {
+    "id": "1508621290",
+    "title": "豆包你到底还有多少我不知道有多少功能？下次替我上班算了！",
+    "impressions": "250.4K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "测评",
+      "第一人称",
+      "明星代言",
+      "促销"
+    ],
+    "delivery_days": "15",
+    "activity_index": 100,
+    "today_exposure": "250.4K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1523794942",
+    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
+    "impressions": "1.4M",
+    "videoName": "1523794942.mp4",
+    "date": "2026-03-20",
+    "category": "生活服务",
+    "tags": [
+      "实拍演示",
       "口播",
       "明星代言",
       "动画"
+    ],
+    "delivery_days": "5",
+    "activity_index": 100,
+    "today_exposure": "1.4M",
+    "channels": [
+      "小米联盟媒体"
     ]
   },
   {
-    "id": "5oput7ZydVvbceTnS0aFhw==",
-    "title": "不会拍照？用豆包AI修图，拯救废片",
-    "impressions": "222.3K",
-    "videoName": "5oput7ZydVvbceTnS0aFhw==.mp4",
-    "date": "2026-03-18",
-    "category": "电商",
+    "id": "1306150393",
+    "title": "豆包你到底还有多少我不知道有多少功能？下次替我上班算了！",
+    "impressions": "572.5K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "游戏",
+    "tags": [
+      "高能混剪",
+      "明星代言",
+      "剧情"
+    ],
+    "delivery_days": "11",
+    "activity_index": 100,
+    "today_exposure": "572.5K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1500693850",
+    "title": "尊嘟假嘟？豆包从旅游攻略到代码编写全包?",
+    "impressions": "416.2K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "游戏",
+    "tags": [
+      "明星代言",
+      "动画",
+      "实拍演示",
+      "数据对比"
+    ],
+    "delivery_days": "3",
+    "activity_index": 100,
+    "today_exposure": "416.2K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1474078669",
+    "title": "豆包 yyds！AI 界六边形战士，用一次就锁死！",
+    "impressions": "755.1K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "数据对比",
+      "测评",
+      "口播"
+    ],
+    "delivery_days": "4",
+    "activity_index": 100,
+    "today_exposure": "755.1K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1463360127",
+    "title": "随时帮忙的 AI 助手",
+    "impressions": "221.3K",
+    "videoName": "1463360127.mp4",
+    "date": "2026-03-20",
+    "category": "游戏",
+    "tags": [
+      "剧情",
+      "高能混剪",
+      "实拍演示",
+      "明星代言"
+    ],
+    "delivery_days": "23",
+    "activity_index": 100,
+    "today_exposure": "221.3K",
+    "channels": [
+      "小米画报"
+    ]
+  },
+  {
+    "id": "1503153759",
+    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
+    "impressions": "510.4K",
+    "videoName": "1503153759.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "数据对比",
+      "测评",
+      "实拍演示"
+    ],
+    "delivery_days": "11",
+    "activity_index": 100,
+    "today_exposure": "510.4K",
+    "channels": [
+      "小米联盟媒体"
+    ]
+  },
+  {
+    "id": "1492284883",
+    "title": "字节悄悄上线了一个新板块，大多数人都还不知道这个不起眼的功能将会成为25年的新风口#豆包app",
+    "impressions": "2.9M",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "工具",
+    "tags": [
+      "第一人称",
+      "实拍演示"
+    ],
+    "delivery_days": "3",
+    "activity_index": 100,
+    "today_exposure": "2.9M",
+    "channels": [
+      "今日头条"
+    ]
+  },
+  {
+    "id": "1230150526",
+    "title": "无广告全免费，打工人福音！文案创意、活动策划、总结一键生成..",
+    "impressions": "307.3K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "金融",
+    "tags": [
+      "实拍演示",
+      "口播",
+      "明星代言",
+      "测评"
+    ],
+    "delivery_days": "29",
+    "activity_index": 99,
+    "today_exposure": "307.3K",
+    "channels": [
+      "QQ",
+      "腾讯新闻"
+    ]
+  },
+  {
+    "id": "1474078669",
+    "title": "不会还有人没用AI智能应用吧！智能时代来临，你还在等什么？",
+    "impressions": "121.9K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "金融",
+    "tags": [
+      "实拍演示",
+      "口播",
+      "剧情"
+    ],
+    "delivery_days": "6",
+    "activity_index": 99,
+    "today_exposure": "121.9K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1482358552",
+    "title": "在这里提供超多爆款模板和AI创作工具，15秒完成制作",
+    "impressions": "142.8K",
+    "videoName": "1482358552.mp4",
+    "date": "2026-03-20",
+    "category": "生活服务",
+    "tags": [
+      "测评",
+      "数据对比"
+    ],
+    "delivery_days": "21",
+    "activity_index": 99,
+    "today_exposure": "142.8K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1474078669",
+    "title": "谁懂啊！有豆包在手，学习工作直接开挂",
+    "impressions": "393.2K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "金融",
     "tags": [
       "动画",
+      "明星代言",
+      "高能混剪",
+      "实拍演示"
+    ],
+    "delivery_days": "10",
+    "activity_index": 99,
+    "today_exposure": "393.2K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1187549756",
+    "title": "数据头疼？豆包自动分析，结论一键出！",
+    "impressions": "88.1K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "金融",
+    "tags": [
+      "高能混剪",
+      "数据对比",
+      "实拍演示"
+    ],
+    "delivery_days": "4",
+    "activity_index": 99,
+    "today_exposure": "88.1K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1522681572",
+    "title": "AI 智能助手，懂你所想，快来下载！",
+    "impressions": "588.5K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "电商",
+    "tags": [
+      "第一人称",
+      "促销",
+      "测评"
+    ],
+    "delivery_days": "4",
+    "activity_index": 99,
+    "today_exposure": "588.5K",
+    "channels": [
+      "腾讯新闻"
+    ]
+  },
+  {
+    "id": "1306150393",
+    "title": "2024必备神器，变态又好用！",
+    "impressions": "84.2K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "口播",
+      "动画",
+      "实拍演示",
+      "测评"
+    ],
+    "delivery_days": "10",
+    "activity_index": 99,
+    "today_exposure": "84.2K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1525359282",
+    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
+    "impressions": "125.0K",
+    "videoName": "1525359282.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "第一人称",
+      "数据对比",
+      "实拍演示"
+    ],
+    "delivery_days": "3",
+    "activity_index": 99,
+    "today_exposure": "125.0K",
+    "channels": [
+      "小米联盟媒体"
+    ]
+  },
+  {
+    "id": "1380587985",
+    "title": "3月18日英语分数自然就不会差了，记单词，保持在刚刚好的难度，别太难，别太简单！",
+    "impressions": "171.6K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "数据对比",
+      "促销",
+      "实拍演示"
+    ],
+    "delivery_days": "3",
+    "activity_index": 99,
+    "today_exposure": "171.6K",
+    "channels": [
+      "今日头条"
+    ]
+  },
+  {
+    "id": "1474078669",
+    "title": "豆包 AI，让手机成为随身智能工作站，效率拉满",
+    "impressions": "168.3K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "游戏",
+    "tags": [
+      "数据对比",
+      "剧情",
+      "测评",
+      "口播"
+    ],
+    "delivery_days": "3",
+    "activity_index": 99,
+    "today_exposure": "168.3K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1525325608",
+    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
+    "impressions": "147.2K",
+    "videoName": "1525325608.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "明星代言",
+      "测评",
+      "剧情",
+      "高能混剪"
+    ],
+    "delivery_days": "3",
+    "activity_index": 99,
+    "today_exposure": "147.2K",
+    "channels": [
+      "小米联盟媒体"
+    ]
+  },
+  {
+    "id": "1509547169",
+    "title": "随时帮忙的 AI 助手",
+    "impressions": "118.9K",
+    "videoName": "1509547169.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "口播",
+      "明星代言",
+      "测评"
+    ],
+    "delivery_days": "8",
+    "activity_index": 99,
+    "today_exposure": "118.9K",
+    "channels": [
+      "小米画报"
+    ]
+  },
+  {
+    "id": "1474078669",
+    "title": "全部免费无条件限制的国产AI神器豆包！#AI#豆包#人工智能",
+    "impressions": "91.8K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "生活服务",
+    "tags": [
+      "口播",
+      "明星代言",
+      "数据对比"
+    ],
+    "delivery_days": "4",
+    "activity_index": 99,
+    "today_exposure": "91.8K",
+    "channels": [
+      "今日头条",
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1474078669",
+    "title": "豆包智能AI工具，无广告、免费，不限使用时长、使用次数",
+    "impressions": "210.8K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "测评",
+      "口播",
+      "明星代言"
+    ],
+    "delivery_days": "5",
+    "activity_index": 99,
+    "today_exposure": "210.8K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1489941199",
+    "title": "这才是我们想要的AI助手！实测好用，生活工作好帮手",
+    "impressions": "153.7K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "游戏",
+    "tags": [
+      "第一人称",
+      "数据对比",
+      "动画"
+    ],
+    "delivery_days": "11",
+    "activity_index": 99,
+    "today_exposure": "153.7K",
+    "channels": [
+      "腾讯新闻",
+      "QQ"
+    ]
+  },
+  {
+    "id": "1466842521",
+    "title": "ai智能工具，一键开启智能时代",
+    "impressions": "376.6K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "剧情",
+      "明星代言",
+      "测评"
+    ],
+    "delivery_days": "3",
+    "activity_index": 99,
+    "today_exposure": "376.6K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1380587985",
+    "title": "豆包智慧，轻松获取，准确速答，无忧无忧",
+    "impressions": "71.5K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "第一人称",
+      "高能混剪",
+      "测评",
+      "动画"
+    ],
+    "delivery_days": "8",
+    "activity_index": 99,
+    "today_exposure": "71.5K",
+    "channels": [
+      "今日头条"
+    ]
+  },
+  {
+    "id": "1380587985",
+    "title": "3月18日英语分数自然就不会差了，记单词，保持在刚刚好的难度，别太难，别太简单！",
+    "impressions": "128.7K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "工具",
+    "tags": [
+      "促销",
       "第一人称"
+    ],
+    "delivery_days": "4",
+    "activity_index": 99,
+    "today_exposure": "128.7K",
+    "channels": [
+      "今日头条"
+    ]
+  },
+  {
+    "id": "1445081645",
+    "title": "豆包，解锁你的全能生产力。",
+    "impressions": "84.4K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "电商",
+    "tags": [
+      "实拍演示",
+      "动画"
+    ],
+    "delivery_days": "5",
+    "activity_index": 99,
+    "today_exposure": "84.4K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1445081645",
+    "title": "字节跳动旗下应用，没有广告全免费，不限时长次数！",
+    "impressions": "130.1K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "金融",
+    "tags": [
+      "实拍演示",
+      "明星代言",
+      "口播",
+      "促销"
+    ],
+    "delivery_days": "6",
+    "activity_index": 98,
+    "today_exposure": "130.1K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1479505590",
+    "title": "智能生活从豆包开始，AI赋能，美好触手可及！",
+    "impressions": "312.7K",
+    "videoName": "1479505590.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "口播",
+      "动画",
+      "第一人称"
+    ],
+    "delivery_days": "3",
+    "activity_index": 98,
+    "today_exposure": "312.7K",
+    "channels": [
+      "未知渠道"
+    ]
+  },
+  {
+    "id": "1491785205",
+    "title": "免费AI一键搜索全新方案，效率嘎嘎高！",
+    "impressions": "126.5K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "游戏",
+    "tags": [
+      "测评",
+      "促销"
+    ],
+    "delivery_days": "4",
+    "activity_index": 98,
+    "today_exposure": "126.5K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1496738643",
+    "title": "打工人的提效神器在手，繁琐工作不再愁！",
+    "impressions": "462.2K",
+    "videoName": "1496738643.mp4",
+    "date": "2026-03-20",
+    "category": "电商",
+    "tags": [
+      "实拍演示",
+      "第一人称",
+      "口播"
+    ],
+    "delivery_days": "3",
+    "activity_index": 98,
+    "today_exposure": "462.2K",
+    "channels": [
+      "小米联盟媒体"
+    ]
+  },
+  {
+    "id": "1476926504",
+    "title": "3月16日英语分数自然就不会差了，句子也不复杂，去把单词顺带去记住",
+    "impressions": "114.4K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "生活服务",
+    "tags": [
+      "剧情",
+      "第一人称",
+      "测评"
+    ],
+    "delivery_days": "5",
+    "activity_index": 98,
+    "today_exposure": "114.4K",
+    "channels": [
+      "今日头条"
+    ]
+  },
+  {
+    "id": "1380587985",
+    "title": "3月17日英语分数自然就不会差了，太实用了，快来看看你那里有吗？",
+    "impressions": "114.4K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "教育",
+    "tags": [
+      "实拍演示",
+      "高能混剪",
+      "促销"
+    ],
+    "delivery_days": "4",
+    "activity_index": 98,
+    "today_exposure": "114.4K",
+    "channels": [
+      "今日头条"
+    ]
+  },
+  {
+    "id": "1507228616",
+    "title": "太炸裂了！现在的AI都怎么厉害了吗？",
+    "impressions": "126.2K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "生活服务",
+    "tags": [
+      "口播",
+      "高能混剪",
+      "测评",
+      "明星代言"
+    ],
+    "delivery_days": "10",
+    "activity_index": 98,
+    "today_exposure": "126.2K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1523831346",
+    "title": "火爆全网的免费AI作图神器，输入文字自动生成画面！",
+    "impressions": "57.7K",
+    "videoName": "1523831346.mp4",
+    "date": "2026-03-20",
+    "category": "生活服务",
+    "tags": [
+      "实拍演示",
+      "测评",
+      "第一人称",
+      "剧情"
+    ],
+    "delivery_days": "4",
+    "activity_index": 98,
+    "today_exposure": "57.7K",
+    "channels": [
+      "小米联盟媒体"
+    ]
+  },
+  {
+    "id": "1474967208",
+    "title": "豆包杀疯了！从情感咨询到数学题全搞定?",
+    "impressions": "84.2K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "工具",
+    "tags": [
+      "口播",
+      "实拍演示",
+      "高能混剪",
+      "测评"
+    ],
+    "delivery_days": "6",
+    "activity_index": 97,
+    "today_exposure": "84.2K",
+    "channels": [
+      "穿山甲联盟"
+    ]
+  },
+  {
+    "id": "1508851663",
+    "title": "AI搜索正在彻底改变我们的上网方式#豆包app#有ai就有无限可能#ai工具#人工智能#科技改变生活",
+    "impressions": "5.0M",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "电商",
+    "tags": [
+      "实拍演示",
+      "第一人称"
+    ],
+    "delivery_days": "2",
+    "activity_index": 97,
+    "today_exposure": "5.0M",
+    "channels": [
+      "今日头条"
+    ]
+  },
+  {
+    "id": "1380587985",
+    "title": "3月15日每日一词，去把单词顺带去记住，精准识别，使用简单，地区历史一秒解答，实时查看随时补充，牢固记忆",
+    "impressions": "57.2K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "游戏",
+    "tags": [
+      "明星代言",
+      "高能混剪"
+    ],
+    "delivery_days": "6",
+    "activity_index": 97,
+    "today_exposure": "57.2K",
+    "channels": [
+      "今日头条"
+    ]
+  },
+  {
+    "id": "1380587985",
+    "title": "3月18日记单词，句子也不复杂，保持在刚刚好的难度，帮你提高英语分数！",
+    "impressions": "85.8K",
+    "videoName": "placeholder.mp4",
+    "date": "2026-03-20",
+    "category": "工具",
+    "tags": [
+      "数据对比",
+      "促销",
+      "口播",
+      "实拍演示"
+    ],
+    "delivery_days": "3",
+    "activity_index": 97,
+    "today_exposure": "85.8K",
+    "channels": [
+      "今日头条"
     ]
   }
 ]

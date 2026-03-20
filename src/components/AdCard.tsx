@@ -17,7 +17,17 @@ interface AdItem {
   channels?: any[];
 }
 
-export default function AdCard({ ad, rank, onClick }: { ad: AdItem; rank: number; onClick?: (ad: AdItem) => void }) {
+export default function AdCard({ 
+  ad, 
+  rank, 
+  onClick, 
+  layout = 'grid' 
+}: { 
+  ad: AdItem; 
+  rank: number; 
+  onClick?: (ad: AdItem) => void;
+  layout?: 'grid' | 'list';
+}) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -42,6 +52,78 @@ export default function AdCard({ ad, rank, onClick }: { ad: AdItem; rank: number
       setIsPlaying(false);
     }
   };
+
+  if (layout === 'list') {
+    return (
+      <div 
+        className="group relative flex flex-row items-center overflow-hidden rounded-[24px] border border-white/10 bg-slate-900/50 backdrop-blur-xl transition-all duration-300 hover:bg-white/5 hover:border-indigo-500/30 cursor-pointer"
+        onClick={() => onClick && onClick(ad)}
+      >
+        {/* Simplified Rank for List */}
+        <div className="w-12 flex justify-center shrink-0">
+          <span className={`text-[10px] font-black ${rank <= 3 ? 'text-indigo-400' : 'text-slate-600'}`}>
+            #{rank}
+          </span>
+        </div>
+
+        {/* Small Video Thumbnail */}
+        <div className="relative w-32 h-48 sm:w-40 sm:h-60 overflow-hidden bg-black shrink-0 border-r border-white/5"
+             onMouseEnter={handleMouseEnter}
+             onMouseLeave={handleMouseLeave}>
+          <video 
+            ref={videoRef}
+            loop 
+            muted 
+            playsInline
+            className="h-full w-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+          >
+            <source src={`/videos/${ad.videoName}`} type="video/mp4" />
+          </video>
+          {!isPlaying && (
+            <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+              <Eye className="h-4 w-4 text-white/40" />
+            </div>
+          )}
+        </div>
+
+        {/* Content Area */}
+        <div className="flex-1 flex flex-col sm:flex-row p-6 gap-6 items-center">
+          <div className="flex-1 space-y-3 min-w-0 w-full">
+            <h3 className="line-clamp-2 text-sm font-bold text-slate-200 group-hover:text-indigo-400 transition-colors">
+              {ad.title}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {ad.tags?.slice(0, 3).map(tag => (
+                <span key={tag} className="rounded-md bg-indigo-500/5 px-2 py-0.5 text-[9px] font-bold text-indigo-400/70 border border-indigo-500/10">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Metrics Column */}
+          <div className="grid grid-cols-2 sm:flex sm:items-center gap-8 shrink-0 w-full sm:w-auto">
+            <div className="flex flex-col items-center sm:items-end">
+              <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">活跃指数</span>
+              <span className="text-sm font-black text-indigo-400">{ad.activity_index || '0.0'}</span>
+            </div>
+            <div className="flex flex-col items-center sm:items-end">
+              <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">今日曝光</span>
+              <span className="text-sm font-black text-amber-500/80">{formatDisplay(ad.today_exposure || 0)}</span>
+            </div>
+            <div className="flex flex-col items-center sm:items-end sm:min-w-[80px]">
+              <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">投放天数</span>
+              <span className="text-sm font-bold text-slate-300">{ad.delivery_days || 0}</span>
+            </div>
+            <div className="flex flex-col items-center sm:items-end sm:min-w-[80px]">
+              <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-1">历史总计</span>
+              <span className="text-sm font-bold text-emerald-500/80">{formatDisplay(ad.impressions)}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div 

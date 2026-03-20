@@ -224,18 +224,15 @@ export default function Home() {
               ))}
             </div>
           ) : (
-            <div className="glass rounded-[24px] overflow-hidden">
-              <div className="grid grid-cols-[auto_1fr_100px_180px_100px] gap-4 px-6 py-4 border-b border-white/5 text-[10px] text-slate-500 uppercase font-semibold">
-                <span className="w-8 text-center">#</span><span>文案</span><span className="text-center">曝光</span><span className="text-center">标签</span><span className="text-center">日期</span>
-              </div>
+            <div className="flex flex-col gap-4">
               {filteredAndSortedAds.map((ad, idx) => (
-                <div key={ad.id} onClick={() => setSelectedAd(ad)} className="grid grid-cols-[auto_1fr_100px_180px_100px] gap-4 px-6 py-4 border-b border-white/[0.02] items-center hover:bg-white/[0.03] cursor-pointer group transition-colors">
-                  <div className="w-8 flex justify-center"><span className={`px-2 py-0.5 rounded text-[10px] ${idx < 3 ? 'bg-orange-600 text-white' : 'bg-white/5 text-slate-500'}`}>{idx + 1}</span></div>
-                  <div className="truncate text-sm text-slate-200 group-hover:text-indigo-400 transition-colors font-medium">{ad.title}</div>
-                  <div className="text-center text-sm font-bold text-emerald-400">{formatDisplay(parseImpressions(ad.impressions))}</div>
-                  <div className="flex flex-wrap gap-1 justify-center">{ad.tags?.slice(0, 2).map(t => <span key={t} className="px-1.5 py-0.5 rounded bg-indigo-500/10 text-[9px] text-indigo-300 border border-indigo-500/10">{t}</span>)} {ad.tags && ad.tags.length > 2 && <span className="text-[9px] text-slate-500">+{ad.tags.length-2}</span>}</div>
-                  <div className="text-center text-[10px] text-slate-500">{ad.date || '-'}</div>
-                </div>
+                <AdCard 
+                  key={ad.id} 
+                  ad={ad} 
+                  rank={idx + 1} 
+                  onClick={setSelectedAd} 
+                  layout="list"
+                />
               ))}
             </div>
           )

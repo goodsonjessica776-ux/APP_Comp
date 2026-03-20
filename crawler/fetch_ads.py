@@ -292,21 +292,22 @@ def fetch_ads():
             
             filename = download_video(title, video_url, video_id, out_dir) if video_url else None
             
-            # Record it even if download fails, to meet the "Top 50" requirement
-            extracted_data.append({
-                "id": str(video_id),
-                "title": title[:60] + "..." if len(title) > 60 else title,
-                "impressions": str(today_exposure),
-                "videoName": filename or "placeholder.mp4", # Fallback to placeholder
-                "poster": poster_url, # New fallback poster
-                "date": end_date,
-                "category": random.choice(mock_categories),
-                "tags": random.sample(mock_tags, random.randint(2, 4)),
-                "delivery_days": delivery_days,
-                "activity_index": activity_index,
-                "today_exposure": today_exposure,
-                "channels": channels
-            })
+            # Only include entry if video was successfully downloaded
+            if filename:
+                extracted_data.append({
+                    "id": str(video_id),
+                    "title": title[:60] + "..." if len(title) > 60 else title,
+                    "impressions": str(today_exposure),
+                    "videoName": filename,
+                    "poster": poster_url,
+                    "date": end_date,
+                    "category": random.choice(mock_categories),
+                    "tags": random.sample(mock_tags, random.randint(2, 4)),
+                    "delivery_days": delivery_days,
+                    "activity_index": activity_index,
+                    "today_exposure": today_exposure,
+                    "channels": channels
+                })
         
         page += 1
         if len(extracted_data) < max_items:

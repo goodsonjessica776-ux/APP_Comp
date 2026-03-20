@@ -10,12 +10,13 @@ interface AdItem {
   title: string;
   impressions: string | number;
   videoName: string;
+  poster?: string;
   date: string;
   category?: string;
   tags?: string[];
-  delivery_days?: number;
+  delivery_days?: number | string;
   activity_index?: number;
-  today_exposure?: number;
+  today_exposure?: number | string;
   channels?: any[];
 }
 

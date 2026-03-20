@@ -278,6 +278,7 @@ def fetch_ads():
                     video = resources[0]
             
             video_url = video.get("originalUrl") if video else None
+            poster_url = video.get("poster") if video else None
             video_id = (video.get("id") if video else None) or leaflet.get("id")
             title = creative.get("slogan") or creative.get("description") or "无标题广告"
             
@@ -297,6 +298,7 @@ def fetch_ads():
                 "title": title[:60] + "..." if len(title) > 60 else title,
                 "impressions": str(today_exposure),
                 "videoName": filename or "placeholder.mp4", # Fallback to placeholder
+                "poster": poster_url, # New fallback poster
                 "date": end_date,
                 "category": random.choice(mock_categories),
                 "tags": random.sample(mock_tags, random.randint(2, 4)),
